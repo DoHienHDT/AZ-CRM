@@ -8,8 +8,12 @@
 
 import UIKit
 
-class ContactListTableViewCell: UITableViewCell {
-
+class ContactListTableViewCell: SwipeTableViewCell {
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var malhLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

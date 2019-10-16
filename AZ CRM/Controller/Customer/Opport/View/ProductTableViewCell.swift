@@ -8,7 +8,14 @@
 
 import UIKit
 
-class ProductTableViewCell: UITableViewCell {
+class ProductTableViewCell: SwipeTableViewCell {
+
+    @IBOutlet weak var spLabel: UILabel!
+    @IBOutlet weak var tienCKLabel: UILabel!
+    @IBOutlet weak var tienVatLabel: UILabel!
+    @IBOutlet weak var tongTienLabel: UILabel!
+    @IBOutlet weak var thanhTienLabel: UILabel!
+    @IBOutlet weak var soluongLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,3 +29,4 @@ class ProductTableViewCell: UITableViewCell {
     }
     
 }
+

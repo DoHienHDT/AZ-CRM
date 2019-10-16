@@ -9,7 +9,9 @@
 import UIKit
 
 class StaffTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var idLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var maspLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,3 +24,4 @@ class StaffTableViewCell: UITableViewCell {
     }
     
 }
+

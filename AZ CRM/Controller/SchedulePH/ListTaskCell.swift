@@ -8,8 +8,17 @@
 
 import UIKit
 
-class ListTaskCell: UITableViewCell {
+class ListTaskCell: SwipeTableViewCell {
 
+    @IBOutlet weak var nguoinhapLabel: UILabel!
+    @IBOutlet weak var tencvLabel: UILabel!
+    @IBOutlet weak var ngaybdLabel: UILabel!
+    @IBOutlet weak var ngayktLabel: UILabel!
+    @IBOutlet weak var mattLabel: UILabel!
+    @IBOutlet weak var matdLabel: UILabel!
+    @IBOutlet weak var mattButton: UIButton!
+    @IBOutlet weak var tenkhLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,3 +31,4 @@ class ListTaskCell: UITableViewCell {
     }
     
 }
+

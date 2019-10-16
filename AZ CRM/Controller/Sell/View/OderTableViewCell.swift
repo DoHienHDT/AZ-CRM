@@ -8,17 +8,23 @@
 
 import UIKit
 
-class OderTableViewCell: UITableViewCell {
-
+class OderTableViewCell: SwipeTableViewCell {
+    
+    @IBOutlet weak var nhanvienLb: UILabel!
+    @IBOutlet weak var trangthaiLb: UILabel!
+    @IBOutlet weak var diadiemLb: UILabel!
+    @IBOutlet weak var ngayDhLb: UILabel!
+    @IBOutlet weak var doituongLb: UILabel!
+    @IBOutlet weak var sophieuLb: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }
+

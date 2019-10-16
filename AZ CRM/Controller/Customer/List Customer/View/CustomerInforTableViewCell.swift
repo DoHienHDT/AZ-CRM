@@ -8,10 +8,16 @@
 
 import UIKit
 
-class CustomerInforTableViewCell: UITableViewCell {
+class CustomerInforTableViewCell: SwipeTableViewCell {
 
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var abbreviationNameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +17,62 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AZX" translatesAutoresizingMaskIntoConstraints="NO" id="gMw-FB-iRN">
+                                <rect key="frame" x="37.5" y="50" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="NZc-xr-7kd"/>
+                                    <constraint firstAttribute="width" secondItem="gMw-FB-iRN" secondAttribute="height" id="O7V-lv-7o6"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AZ CRM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLR-VB-hf9">
+                                <rect key="frame" x="77.5" y="370" width="220.5" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="56"/>
+                                <color key="textColor" red="0.87058823529411766" green="0.18823529411764706" blue="0.062745098039215685" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giải pháp Quản lý Chăm sóc Khách hàng Hàng đầu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPa-Yq-N0z">
+                                <rect key="frame" x="50" y="457" width="275" height="50.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0934.457.589" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmI-nq-hpb">
+                                <rect key="frame" x="112.5" y="527.5" width="150" height="27.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="textColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên Hệ Với Chúng Tôi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3R-Us-3b9">
+                                <rect key="frame" x="103" y="575" width="169" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wLR-VB-hf9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="2hn-B5-C6w"/>
+                            <constraint firstItem="wLR-VB-hf9" firstAttribute="top" secondItem="gMw-FB-iRN" secondAttribute="bottom" constant="20" id="3nN-3e-bSi"/>
+                            <constraint firstItem="cmI-nq-hpb" firstAttribute="top" secondItem="XPa-Yq-N0z" secondAttribute="bottom" constant="20" id="8Ys-Jm-pMz"/>
+                            <constraint firstItem="gMw-FB-iRN" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DQn-iu-AsK"/>
+                            <constraint firstItem="gMw-FB-iRN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="IO6-Am-ngX"/>
+                            <constraint firstItem="XPa-Yq-N0z" firstAttribute="top" secondItem="wLR-VB-hf9" secondAttribute="bottom" constant="20" id="JGk-Lf-7lV"/>
+                            <constraint firstItem="e3R-Us-3b9" firstAttribute="top" secondItem="cmI-nq-hpb" secondAttribute="bottom" constant="20" id="Wgo-7h-ZJk"/>
+                            <constraint firstItem="XPa-Yq-N0z" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="50" id="d53-gH-Ubg"/>
+                            <constraint firstItem="XPa-Yq-N0z" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kCa-v5-Wcf"/>
+                            <constraint firstItem="e3R-Us-3b9" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="qYv-7S-HRx"/>
+                            <constraint firstItem="cmI-nq-hpb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zis-0N-jYf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AZX" width="168" height="168"/>
+    </resources>
 </document>

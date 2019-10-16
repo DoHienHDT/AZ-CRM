@@ -8,8 +8,13 @@
 
 import UIKit
 
-class CustomerDetailCell: UITableViewCell {
+class CustomerDetailCell: SwipeTableViewCell {
 
+    @IBOutlet weak var fullNameLabel: UILabel!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var malhLabel: UILabel!
+    @IBOutlet weak var mailLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,8 +22,6 @@ class CustomerDetailCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
 }

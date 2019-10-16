@@ -94,6 +94,7 @@ class AddSchedulesController: BaseViewController {
     }
     
     @IBAction func makhAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alert.addAlertAZSoft(Api: .customers) { [unowned self] (info) in
@@ -101,7 +102,7 @@ class AddSchedulesController: BaseViewController {
             self.makh = Int(info!.customer[0])
         }
         
-        let heightAlert: NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+        let heightAlert: NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
         alert.view.addConstraint(heightAlert)
         
         alert.addAction(title: "Cancel", style: .cancel)
@@ -109,11 +110,12 @@ class AddSchedulesController: BaseViewController {
     }
     
     @IBAction func manvhtsAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
         self.showAsAlertController(style: .actionSheet, title: "Select Player", action: "Done", height: nil)
     }
     
     @IBAction func ngaybdAlertButton(_ sender: UIButton) {
-        
+        view.endEditing(true)
         let dateAdd = Calendar.current.date(byAdding: .minute, value: 5, to: Date())
 
         let dateFormat = DateFormatter()
@@ -144,11 +146,12 @@ class AddSchedulesController: BaseViewController {
     }
     
     @IBAction func nhactruocAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
         self.showAsFormsheet()
     }
     
     @IBAction func macvAlertButton(_ sender: Any) {
-        
+        view.endEditing(true)
         view.endEditing(true)
         
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
@@ -158,7 +161,7 @@ class AddSchedulesController: BaseViewController {
             self.macv = Int(info!.tasks[0])
         }
         
-        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
         alert.view.addConstraint(heightAlert)
         
         alert.addAction(title: "Cancel", style: .cancel)
@@ -166,7 +169,7 @@ class AddSchedulesController: BaseViewController {
     }
     
     @IBAction func ngayktAlertButton(_ sender: UIButton) {
-        
+        view.endEditing(true)
         let today = Date()
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "dd/MM/yyyy HH:mm"
@@ -385,6 +388,7 @@ extension AddSchedulesController {
                                     SVProgressHUD.showSuccess(withStatus: "Thành công")
                                     SVProgressHUD.dismiss(withDelay: 1, completion: {
                                         Alarm.alarm.checkAlarm()
+                                        print("hello")
                                         self.dismiss(animated: true, completion: nil)
                                     })
                                 } else {

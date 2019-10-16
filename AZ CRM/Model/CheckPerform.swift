@@ -7,3 +7,8 @@
 //
 
 import Foundation
+class CheckPerform {
+    static var shared: CheckPerform = CheckPerform()
+    var checkDismis: Bool = false
+    var checkRootView: Bool = false
+}

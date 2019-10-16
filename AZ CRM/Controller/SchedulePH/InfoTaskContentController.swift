@@ -6,4 +6,37 @@
 //  Copyright © 2019 AZCRM. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class InfoTaskContentController: UIViewController {
+    
+    @IBOutlet weak var heightNavigationView: NSLayoutConstraint!
+    @IBOutlet weak var topButton: NSLayoutConstraint!
+    @IBOutlet weak var heightTitle: NSLayoutConstraint!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        switch UIDevice.modelName {
+        case "Simulator iPhone X":
+            topButton.constant = 30
+            heightTitle.constant = 40
+        case "iPhone XS":
+            topButton.constant = 30
+            heightTitle.constant = 40
+        case "iPhone XS Max":
+            topButton.constant = 30
+            heightTitle.constant = 40
+        case "iPhone XR":
+            topButton.constant = 30
+            heightTitle.constant = 40
+        default:
+            break
+        }
+    }
+    
+    @IBAction func backButton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+
+}

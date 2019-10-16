@@ -197,7 +197,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                     let dateAlarm = userInfo["date"] as? Date
                     let titleAlarm = userInfo["title"] as? String
                     let dateformat = DateFormatter()
-                    dateformat.dateFormat = " :mm"
+                    dateformat.dateFormat = "HH:mm"
                     let dateConvertString = dateformat.string(from: dateAlarm!)
                     
                     playSound()
@@ -214,8 +214,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                             }
                         }
                     }
+                    
                     storageController.addAction(stopOption)
-                    window?.rootViewController?.present(storageController, animated: true, completion: nil)
+                    
+                    DispatchQueue.main.async {
+                        self.window?.rootViewController?.present(storageController, animated: true, completion: nil)
+                    }
                 }
             
             // create a sound ID, in this case its the SMSReceived sound.
@@ -224,18 +228,18 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                 if let alertDICT = aps["alert"] as? [String: Any] {
                     let body = alertDICT["body"] as? String
                     let title = alertDICT["title"] as? String
+                    Alarm.alarm.stopAlarm()
                     playSound()
                     let alert = UIAlertController(title: "\(title ?? "")", message: "\(body ?? "")", preferredStyle: .alert)
-                    let action = UIAlertAction(title: "OK", style: .cancel) { (_) in self.audioPlayer?.stop()
+                    let action = UIAlertAction(title: "OK", style: .cancel) { (_) in
+                        Alarm.alarm.checkAlarm()
+                        self.audioPlayer?.stop()
                         AudioServicesRemoveSystemSoundCompletion(kSystemSoundID_Vibrate)
                     }
                     alert.addAction(action)
-                    
-                    let alertWindow = UIWindow(frame: UIScreen.main.bounds)
-                    alertWindow.rootViewController = UIViewController()
-                    alertWindow.windowLevel = UIWindow.Level.alert + 1
-                    alertWindow.makeKeyAndVisible()
-                    alertWindow.rootViewController?.present(alert, animated: true, completion: nil)
+                    DispatchQueue.main.async {
+                    self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                    }
                 }
             }
         }
@@ -288,19 +292,17 @@ extension AppDelegate: MessagingDelegate {
 extension AppDelegate {
     
     func hyperCriticalRulesExample() {
-        
         let siren = Siren.shared
         siren.rulesManager = RulesManager(globalRules: .critical,
                                           showAlertAfterCurrentVersionHasBeenReleasedForDays: 0)
-        siren.wail { results in
-            switch results {
-            case .success(let updateResults):
-                print("AlertAction ", updateResults.alertAction)
-                print("Localization ", updateResults.localization)
-                print("Model ", updateResults.model)
-                print("UpdateType ", updateResults.updateType)
-            case .failure(let error):
-            
+        
+        siren.wail { (results, error) in
+            if let results = results {
+                print("AlertAction ", results.alertAction)
+                print("Localization ", results.localization)
+                print("LookupModel ", results.lookupModel)
+                print("UpdateType ", results.updateType)
+            } else if let error = error {
                 print(error.localizedDescription)
             }
         }

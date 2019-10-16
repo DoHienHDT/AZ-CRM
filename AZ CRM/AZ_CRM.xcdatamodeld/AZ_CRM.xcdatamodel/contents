@@ -1,4 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CompanyCode" representedClassName="CompanyCode" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="String"/>
+        <attribute name="seckey" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Entity" representedClassName="Entity" syncable="YES" codeGenerationType="class">
+        <attribute name="heightNavigation" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="heightTitle" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="heightTopButton" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="heightTopButtonRight" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="isadmin" optional="YES" attributeType="String"/>
+        <attribute name="mact" optional="YES" attributeType="String"/>
+        <attribute name="mankd" optional="YES" attributeType="String"/>
+        <attribute name="manv" optional="YES" attributeType="String"/>
+        <attribute name="mapb" optional="YES" attributeType="String"/>
+        <attribute name="quyenCH" optional="YES" attributeType="String"/>
+        <attribute name="quyenCV" optional="YES" attributeType="String"/>
+        <attribute name="quyenDH" optional="YES" attributeType="String"/>
+        <attribute name="quyenKH" optional="YES" attributeType="String"/>
+        <attribute name="quyenLH" optional="YES" attributeType="String"/>
+        <attribute name="quyenLHen" optional="YES" attributeType="String"/>
+        <attribute name="rtype" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="FCToken" representedClassName="FCToken" syncable="YES" codeGenerationType="class">
+        <attribute name="fcmToken" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Entity" positionX="-63" positionY="-18" width="128" height="283"/>
+        <element name="CompanyCode" positionX="-54" positionY="108" width="128" height="73"/>
+        <element name="FCToken" positionX="-36" positionY="117" width="128" height="58"/>
+    </elements>
 </model>

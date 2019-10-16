@@ -1,7 +1,117 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qy3-4d-krh">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--ListCustomer-->
+        <scene sceneID="Nzs-2x-0ga">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListCustomer" id="ATa-Jx-EWS" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q3h-Yx-oWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="1454"/>
+        </scene>
+        <!--ListContact-->
+        <scene sceneID="gaH-zd-UKH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListContact" id="k19-vZ-K9i" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9wY-4C-Ov1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="220" y="1454"/>
+        </scene>
+        <!--ListOpport-->
+        <scene sceneID="pXZ-94-w9E">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ListOpport" id="haE-Rf-BE7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sg3-81-8Tv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="535" y="1454"/>
+        </scene>
+        <!--Customer View Controller-->
+        <scene sceneID="B6A-EZ-c3R">
+            <objects>
+                <viewController id="qy3-4d-krh" customClass="CustomerViewController" customModule="AZSoft_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5L-sT-v1Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gYb-0Z-6Mf">
+                                <rect key="frame" x="0.0" y="110" width="414" height="752"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="qy3-4d-krh" id="6Vo-0e-VI2"/>
+                                    <outlet property="delegate" destination="qy3-4d-krh" id="IZU-jj-tce"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7YF-kH-2ll">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách Hàng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oDR-TA-Phx">
+                                        <rect key="frame" x="151" y="40" width="112" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wYR-TX-d4s">
+                                        <rect key="frame" x="0.0" y="20" width="80" height="80"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wYR-TX-d4s" secondAttribute="height" multiplier="1:1" id="aue-zp-dfi"/>
+                                        </constraints>
+                                        <state key="normal" image="left-arrow"/>
+                                        <connections>
+                                            <segue destination="hvG-bg-Hjo" kind="unwind" unwindAction="unwindHomeFor:" id="e5D-9k-Ncb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wYR-TX-d4s" firstAttribute="top" secondItem="7YF-kH-2ll" secondAttribute="top" constant="20" id="GL2-bZ-8r6"/>
+                                    <constraint firstItem="oDR-TA-Phx" firstAttribute="top" secondItem="7YF-kH-2ll" secondAttribute="top" constant="40" id="LdG-jW-mer"/>
+                                    <constraint firstItem="oDR-TA-Phx" firstAttribute="centerX" secondItem="7YF-kH-2ll" secondAttribute="centerX" id="RbJ-Xh-2Ep"/>
+                                    <constraint firstAttribute="bottom" secondItem="wYR-TX-d4s" secondAttribute="bottom" id="ZSC-61-puh"/>
+                                    <constraint firstAttribute="height" constant="100" id="c7h-4U-Cz6"/>
+                                    <constraint firstItem="wYR-TX-d4s" firstAttribute="leading" secondItem="7YF-kH-2ll" secondAttribute="leading" id="gfL-gS-U1y"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7YF-kH-2ll" firstAttribute="trailing" secondItem="vS2-fi-rDs" secondAttribute="trailing" id="5lF-ga-Zag"/>
+                            <constraint firstItem="gYb-0Z-6Mf" firstAttribute="leading" secondItem="vS2-fi-rDs" secondAttribute="leading" id="GaY-RT-6Zu"/>
+                            <constraint firstItem="gYb-0Z-6Mf" firstAttribute="top" secondItem="7YF-kH-2ll" secondAttribute="bottom" constant="10" id="N00-gZ-AsO"/>
+                            <constraint firstItem="vS2-fi-rDs" firstAttribute="bottom" secondItem="gYb-0Z-6Mf" secondAttribute="bottom" id="dIf-KF-nKZ"/>
+                            <constraint firstItem="7YF-kH-2ll" firstAttribute="leading" secondItem="vS2-fi-rDs" secondAttribute="leading" id="fe0-jM-Bve"/>
+                            <constraint firstItem="7YF-kH-2ll" firstAttribute="top" secondItem="F5L-sT-v1Z" secondAttribute="top" id="fzJ-S9-add"/>
+                            <constraint firstItem="gYb-0Z-6Mf" firstAttribute="trailing" secondItem="vS2-fi-rDs" secondAttribute="trailing" id="saX-Qb-r1r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vS2-fi-rDs"/>
+                    </view>
+                    <connections>
+                        <outlet property="heightNavigationView" destination="c7h-4U-Cz6" id="Kf7-v7-5a2"/>
+                        <outlet property="heightTitle" destination="LdG-jW-mer" id="Nlf-QJ-QLW"/>
+                        <outlet property="navigationView" destination="7YF-kH-2ll" id="mIF-cV-jwD"/>
+                        <outlet property="tableView" destination="gYb-0Z-6Mf" id="86v-Kb-Jqh"/>
+                        <outlet property="topButton" destination="GL2-bZ-8r6" id="TGa-90-Wut"/>
+                        <segue destination="ATa-Jx-EWS" kind="show" identifier="Customer0" id="Bt5-VQ-9ik"/>
+                        <segue destination="k19-vZ-K9i" kind="show" identifier="Customer1" id="YDv-ya-y5D"/>
+                        <segue destination="haE-Rf-BE7" kind="show" identifier="Customer2" id="oN1-U7-Bcn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZVG-L3-3oJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hvG-bg-Hjo" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="218.84057971014494" y="971.65178571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="left-arrow" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
 </document>
+

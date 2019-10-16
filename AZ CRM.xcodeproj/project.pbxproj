@@ -3,27 +3,432 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57FFF8056ACE32AFD54FA77B /* Pods_AZ_CRM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCF1E4859173CBEFB8248026 /* Pods_AZ_CRM.framework */; };
 		887F8502235424120040D25B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F8501235424120040D25B /* AppDelegate.swift */; };
-		887F8504235424120040D25B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887F8503235424120040D25B /* ViewController.swift */; };
 		887F8507235424120040D25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F8505235424120040D25B /* Main.storyboard */; };
 		887F850A235424120040D25B /* AZ_CRM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 887F8508235424120040D25B /* AZ_CRM.xcdatamodeld */; };
 		887F850C235424230040D25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 887F850B235424230040D25B /* Assets.xcassets */; };
 		887F850F235424230040D25B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 887F850D235424230040D25B /* LaunchScreen.storyboard */; };
+		8895009F2354270A0023DA73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8895009E2354270A0023DA73 /* GoogleService-Info.plist */; };
+		889500A8235429890023DA73 /* AlertRequestApiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500A7235429890023DA73 /* AlertRequestApiController.swift */; };
+		889500AA2354299F0023DA73 /* AttributedTextBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500A92354299F0023DA73 /* AttributedTextBlock.swift */; };
+		889500AC235429B90023DA73 /* TextViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500AB235429B90023DA73 /* TextViewerViewController.swift */; };
+		889500AF235429E60023DA73 /* AlertRequestApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500AE235429E60023DA73 /* AlertRequestApi.swift */; };
+		889500B1235429FE0023DA73 /* SearchHistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500B0235429FE0023DA73 /* SearchHistoryManager.swift */; };
+		889500B423542A180023DA73 /* AlertRequestApiInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500B323542A180023DA73 /* AlertRequestApiInfo.swift */; };
+		889500B623542A250023DA73 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500B523542A250023DA73 /* Location.swift */; };
+		889500B823542A330023DA73 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500B723542A330023DA73 /* Address.swift */; };
+		889500BB23542A500023DA73 /* AlertTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500BA23542A500023DA73 /* AlertTableViewCell.swift */; };
+		889500BD23542A5C0023DA73 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500BC23542A5C0023DA73 /* Button.swift */; };
+		889500BF23542A820023DA73 /* UItextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500BE23542A820023DA73 /* UItextFieldExtension.swift */; };
+		889500C123542A910023DA73 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500C023542A910023DA73 /* DatePickerViewController.swift */; };
+		889500C323542A9F0023DA73 /* Common+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500C223542A9F0023DA73 /* Common+Extensions.swift */; };
+		889500C523542AAE0023DA73 /* UIAlertController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500C423542AAE0023DA73 /* UIAlertController+Extensions.swift */; };
+		889500C723542ABD0023DA73 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500C623542ABD0023DA73 /* UIView.swift */; };
+		889500CA23542BD90023DA73 /* Reach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500C923542BD90023DA73 /* Reach.swift */; };
+		889500CD23542BF50023DA73 /* SwiftyInnerShadowLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500CC23542BF50023DA73 /* SwiftyInnerShadowLayer.swift */; };
+		889500CF23542C180023DA73 /* SwiftyInnerShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500CE23542C180023DA73 /* SwiftyInnerShadowView.swift */; };
+		889500D223542CE40023DA73 /* alarm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 889500D123542CE40023DA73 /* alarm.mp3 */; };
+		889500D523542CF30023DA73 /* AlarmSchedulerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500D423542CF30023DA73 /* AlarmSchedulerDelegate.swift */; };
+		889500D723542D000023DA73 /* AlarmItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500D623542D000023DA73 /* AlarmItem.swift */; };
+		889500D923542D0D0023DA73 /* AlarmList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500D823542D0D0023DA73 /* AlarmList.swift */; };
+		889500DB23542D1B0023DA73 /* Scheduler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500DA23542D1B0023DA73 /* Scheduler.swift */; };
+		889500DD23542D280023DA73 /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500DC23542D280023DA73 /* Alarm.swift */; };
+		889500E023542D420023DA73 /* SkyFloatingLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500DF23542D420023DA73 /* SkyFloatingLabelTextField.swift */; };
+		889500E223542D5A0023DA73 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500E123542D5A0023DA73 /* SkyFloatingLabelTextFieldWithIcon.swift */; };
+		889500E423542D690023DA73 /* UITextField+fixCaretPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500E323542D690023DA73 /* UITextField+fixCaretPosition.swift */; };
+		889500E723542D840023DA73 /* SJContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500E623542D840023DA73 /* SJContentView.swift */; };
+		889500E923542D930023DA73 /* SJSegmentedScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500E823542D930023DA73 /* SJSegmentedScrollView.swift */; };
+		889500EB23542DA30023DA73 /* SJSegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500EA23542DA30023DA73 /* SJSegmentedViewController.swift */; };
+		889500ED23542DB30023DA73 /* SJSegmentTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500EC23542DB30023DA73 /* SJSegmentTab.swift */; };
+		889500EF23542DC30023DA73 /* SJSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500EE23542DC30023DA73 /* SJSegmentView.swift */; };
+		889500F123542DD30023DA73 /* SJShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500F023542DD30023DA73 /* SJShadow.swift */; };
+		889500F323542DE00023DA73 /* SJUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500F223542DE00023DA73 /* SJUtil.swift */; };
+		889500F623542DFB0023DA73 /* Swipeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500F523542DFB0023DA73 /* Swipeable.swift */; };
+		889500F823542E090023DA73 /* SwipeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500F723542E090023DA73 /* SwipeAnimator.swift */; };
+		889500FA23542E160023DA73 /* SwipeAccessibilityCustomAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500F923542E160023DA73 /* SwipeAccessibilityCustomAction.swift */; };
+		889500FC23542E240023DA73 /* SwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500FB23542E240023DA73 /* SwipeController.swift */; };
+		889500FE23542E340023DA73 /* SwipeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500FD23542E340023DA73 /* SwipeTableCell.swift */; };
+		8895010023542E450023DA73 /* SwipeTableViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889500FF23542E450023DA73 /* SwipeTableViewCell+Accessibility.swift */; };
+		8895010223542E5E0023DA73 /* SwipeTableViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010123542E5E0023DA73 /* SwipeTableViewCell+Display.swift */; };
+		8895010423542E6E0023DA73 /* SwipeTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010323542E6E0023DA73 /* SwipeTableViewCellDelegate.swift */; };
+		8895010623542E7F0023DA73 /* SwipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010523542E7F0023DA73 /* SwipeCollectionViewCell.swift */; };
+		8895010823542E900023DA73 /* SwipeCollectionViewCell+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010723542E900023DA73 /* SwipeCollectionViewCell+Accessibility.swift */; };
+		8895010A23542EA20023DA73 /* SwipeCollectionViewCell+Display.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010923542EA20023DA73 /* SwipeCollectionViewCell+Display.swift */; };
+		8895010C23542EB20023DA73 /* SwipeCollectionViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010B23542EB20023DA73 /* SwipeCollectionViewCellDelegate.swift */; };
+		8895010E23542EC10023DA73 /* SwipeTransitionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010D23542EC10023DA73 /* SwipeTransitionLayout.swift */; };
+		8895011023542ED00023DA73 /* SwipeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895010F23542ED00023DA73 /* SwipeOptions.swift */; };
+		8895011223542EE40023DA73 /* SwipeActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011123542EE40023DA73 /* SwipeActionsView.swift */; };
+		8895011423542EFB0023DA73 /* SwipeAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011323542EFB0023DA73 /* SwipeAction.swift */; };
+		8895011623542F0B0023DA73 /* SwipeActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011523542F0A0023DA73 /* SwipeActionButton.swift */; };
+		8895011823542F190023DA73 /* SwipeActionTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011723542F190023DA73 /* SwipeActionTransitioning.swift */; };
+		8895011A23542F280023DA73 /* SwipeExpansionStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011923542F280023DA73 /* SwipeExpansionStyle.swift */; };
+		8895011C23542F390023DA73 /* SwipeExpanding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011B23542F390023DA73 /* SwipeExpanding.swift */; };
+		8895011E23542F490023DA73 /* SwipeFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011D23542F490023DA73 /* SwipeFeedback.swift */; };
+		8895012023542F570023DA73 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895011F23542F560023DA73 /* Extensions.swift */; };
+		8895012223542F660023DA73 /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012123542F660023DA73 /* Shared.swift */; };
+		8895012423542F8D0023DA73 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012323542F8D0023DA73 /* Config.swift */; };
+		8895012623542F9B0023DA73 /* CheckPerform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012523542F9B0023DA73 /* CheckPerform.swift */; };
+		8895012823542FA80023DA73 /* RequestGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012723542FA80023DA73 /* RequestGroups.swift */; };
+		8895012A23542FBD0023DA73 /* GroupsApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012923542FBD0023DA73 /* GroupsApiModel.swift */; };
+		8895012C23542FCD0023DA73 /* LogFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012B23542FCD0023DA73 /* LogFile.swift */; };
+		8895012E23542FDC0023DA73 /* SendNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012D23542FDC0023DA73 /* SendNotification.swift */; };
+		88950131235431E30023DA73 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895012F235431E30023DA73 /* CustomTableViewCell.swift */; };
+		88950132235431E30023DA73 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88950130235431E30023DA73 /* CustomTableViewCell.xib */; };
+		889501352354320F0023DA73 /* StaffTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501332354320F0023DA73 /* StaffTableViewCell.swift */; };
+		889501362354320F0023DA73 /* StaffTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501342354320F0023DA73 /* StaffTableViewCell.xib */; };
+		88950138235432490023DA73 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950137235432490023DA73 /* BaseViewController.swift */; };
+		8895013A2354325C0023DA73 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501392354325C0023DA73 /* LoginScreenViewController.swift */; };
+		8895013C2354326F0023DA73 /* AZCRMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895013B2354326F0023DA73 /* AZCRMViewController.swift */; };
+		8895013F235432A50023DA73 /* ScheduleHomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895013E235432A50023DA73 /* ScheduleHomeController.swift */; };
+		88950142235432CA0023DA73 /* ScheduleMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88950141235432CA0023DA73 /* ScheduleMain.storyboard */; };
+		88950145235433260023DA73 /* ListScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950144235433260023DA73 /* ListScheduleController.swift */; };
+		88950148235433460023DA73 /* ScheduleRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950147235433460023DA73 /* ScheduleRequest.swift */; };
+		8895014C2354336C0023DA73 /* ListScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895014A2354336C0023DA73 /* ListScheduleCell.swift */; };
+		8895014D2354336C0023DA73 /* ListScheduleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895014B2354336C0023DA73 /* ListScheduleCell.xib */; };
+		889501502354339A0023DA73 /* ListScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895014F2354339A0023DA73 /* ListScheduleModel.swift */; };
+		88950156235433CE0023DA73 /* InfoScheduleController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88950155235433CE0023DA73 /* InfoScheduleController.storyboard */; };
+		88950158235433EB0023DA73 /* InfoScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950157235433EB0023DA73 /* InfoScheduleController.swift */; };
+		8895015A2354340B0023DA73 /* EditScheduleController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501592354340B0023DA73 /* EditScheduleController.storyboard */; };
+		8895015C235434150023DA73 /* EditSchedulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895015B235434150023DA73 /* EditSchedulesController.swift */; };
+		8895015E235434520023DA73 /* AddSchedulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895015D235434520023DA73 /* AddSchedulesController.swift */; };
+		889501602354346E0023DA73 /* AddScheduleController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895015F2354346E0023DA73 /* AddScheduleController.storyboard */; };
+		88950163235434B00023DA73 /* ListTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950162235434B00023DA73 /* ListTaskController.swift */; };
+		88950167235434DE0023DA73 /* ListTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950165235434DE0023DA73 /* ListTaskCell.swift */; };
+		88950168235434DE0023DA73 /* ListTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88950166235434DE0023DA73 /* ListTaskCell.xib */; };
+		8895016B235435060023DA73 /* InfoStaffTaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950169235435060023DA73 /* InfoStaffTaskCell.swift */; };
+		8895016C235435060023DA73 /* InfoStaffTaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895016A235435060023DA73 /* InfoStaffTaskCell.xib */; };
+		8895016F2354352D0023DA73 /* FollowWorkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895016D2354352D0023DA73 /* FollowWorkCell.swift */; };
+		889501702354352D0023DA73 /* FollowWorkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895016E2354352D0023DA73 /* FollowWorkCell.xib */; };
+		889501732354355E0023DA73 /* TaskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501722354355E0023DA73 /* TaskRequest.swift */; };
+		889501752354356D0023DA73 /* InfoTaskRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501742354356D0023DA73 /* InfoTaskRequest.swift */; };
+		88950177235435810023DA73 /* FollowWorkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950176235435800023DA73 /* FollowWorkRequest.swift */; };
+		8895017A235435970023DA73 /* ListTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950179235435970023DA73 /* ListTaskModel.swift */; };
+		8895017C235435A70023DA73 /* InfoTaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895017B235435A70023DA73 /* InfoTaskModel.swift */; };
+		8895017E235435B80023DA73 /* FollowWorkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895017D235435B80023DA73 /* FollowWorkModel.swift */; };
+		88950186235436060023DA73 /* InfoStaffTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950185235436060023DA73 /* InfoStaffTaskController.swift */; };
+		889501882354361D0023DA73 /* InfoTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501872354361D0023DA73 /* InfoTaskController.swift */; };
+		8895018A235436310023DA73 /* InfoTaskContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950189235436310023DA73 /* InfoTaskContentController.swift */; };
+		8895018C235436440023DA73 /* InfoTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895018B235436440023DA73 /* InfoTaskController.storyboard */; };
+		8895018E235436700023DA73 /* AddStaffTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895018D235436700023DA73 /* AddStaffTaskController.swift */; };
+		88950190235436820023DA73 /* AddTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895018F235436810023DA73 /* AddTaskController.swift */; };
+		889501922354369D0023DA73 /* AddTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501912354369D0023DA73 /* AddTaskController.storyboard */; };
+		88950194235436BD0023DA73 /* EditStaffTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950193235436BD0023DA73 /* EditStaffTaskController.swift */; };
+		88950196235436D40023DA73 /* EditListStaffController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950195235436D40023DA73 /* EditListStaffController.swift */; };
+		88950198235436F10023DA73 /* EditTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950197235436F10023DA73 /* EditTaskController.swift */; };
+		8895019A235437060023DA73 /* EditTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88950199235437060023DA73 /* EditTaskController.storyboard */; };
+		8895019C235437260023DA73 /* AddProcessTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895019B235437260023DA73 /* AddProcessTaskController.swift */; };
+		8895019E2354373C0023DA73 /* FllowWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895019D2354373C0023DA73 /* FllowWorkController.swift */; };
+		889501A0235437510023DA73 /* ProcessTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895019F235437510023DA73 /* ProcessTaskController.storyboard */; };
+		889501A2235437720023DA73 /* FilterTaskController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501A1235437720023DA73 /* FilterTaskController.swift */; };
+		889501A42354378B0023DA73 /* FilterTaskController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501A32354378B0023DA73 /* FilterTaskController.storyboard */; };
+		889501A72354503B0023DA73 /* CustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501A62354503B0023DA73 /* CustomerViewController.swift */; };
+		889501AA235450680023DA73 /* CustomerMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501A9235450680023DA73 /* CustomerMain.storyboard */; };
+		889501AD235450A80023DA73 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501AC235450A80023DA73 /* ContactViewController.swift */; };
+		889501B0235450D20023DA73 /* RequetsContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501AF235450D20023DA73 /* RequetsContact.swift */; };
+		889501B3235450F30023DA73 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501B2235450F30023DA73 /* ContactModel.swift */; };
+		889501B5235451040023DA73 /* ListInfoContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501B4235451040023DA73 /* ListInfoContactController.swift */; };
+		889501B8235452400023DA73 /* InfoContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501B7235452400023DA73 /* InfoContactController.swift */; };
+		889501BA235452650023DA73 /* EditContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501B9235452650023DA73 /* EditContactController.swift */; };
+		889501BC235452850023DA73 /* AddContactControllerLH.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501BB235452850023DA73 /* AddContactControllerLH.swift */; };
+		889501C0235452B40023DA73 /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501BE235452B40023DA73 /* ContactListTableViewCell.swift */; };
+		889501C1235452B40023DA73 /* ContactListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501BF235452B40023DA73 /* ContactListTableViewCell.xib */; };
+		889501C4235452E20023DA73 /* ListContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501C3235452E20023DA73 /* ListContact.storyboard */; };
+		889501C7235453600023DA73 /* OpportunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501C6235453600023DA73 /* OpportunityViewController.swift */; };
+		889501CA235453870023DA73 /* OpportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501C9235453870023DA73 /* OpportModel.swift */; };
+		889501CC2354539D0023DA73 /* OportProcessModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501CB2354539D0023DA73 /* OportProcessModel.swift */; };
+		889501CE235453B50023DA73 /* DelegateDataProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501CD235453B50023DA73 /* DelegateDataProduct.swift */; };
+		889501D0235453CD0023DA73 /* TakeCareOpportModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501CF235453CC0023DA73 /* TakeCareOpportModel.swift */; };
+		889501D4235453F70023DA73 /* OpportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501D2235453F70023DA73 /* OpportTableViewCell.swift */; };
+		889501D5235453F70023DA73 /* OpportTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501D3235453F70023DA73 /* OpportTableViewCell.xib */; };
+		889501D8235454380023DA73 /* OportProcessCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501D6235454380023DA73 /* OportProcessCell.swift */; };
+		889501D9235454380023DA73 /* OportProcessCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501D7235454380023DA73 /* OportProcessCell.xib */; };
+		889501DC235454690023DA73 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501DA235454690023DA73 /* ProductTableViewCell.swift */; };
+		889501DD235454690023DA73 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501DB235454690023DA73 /* ProductTableViewCell.xib */; };
+		889501E02354549B0023DA73 /* TakeCareOportCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501DE2354549B0023DA73 /* TakeCareOportCell.swift */; };
+		889501E12354549B0023DA73 /* TakeCareOportCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501DF2354549B0023DA73 /* TakeCareOportCell.xib */; };
+		889501E4235454C20023DA73 /* TakeCareOpportProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501E2235454C20023DA73 /* TakeCareOpportProductCell.swift */; };
+		889501E5235454C20023DA73 /* TakeCareOpportProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 889501E3235454C20023DA73 /* TakeCareOpportProductCell.xib */; };
+		889501E8235455070023DA73 /* ListOpport.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501E7235455070023DA73 /* ListOpport.storyboard */; };
+		889501EB235455320023DA73 /* RequestOportProcess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501EA235455320023DA73 /* RequestOportProcess.swift */; };
+		889501ED235455440023DA73 /* RequestTakeCareOpport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501EC235455440023DA73 /* RequestTakeCareOpport.swift */; };
+		889501EF2354555E0023DA73 /* RequestOport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501EE2354555E0023DA73 /* RequestOport.swift */; };
+		889501F3235455CE0023DA73 /* OpportProcessController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501F2235455CE0023DA73 /* OpportProcessController.swift */; };
+		889501F5235455E30023DA73 /* HandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501F4235455E30023DA73 /* HandingViewController.swift */; };
+		889501F7235455FC0023DA73 /* AddSchedulesOpportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501F6235455FC0023DA73 /* AddSchedulesOpportController.swift */; };
+		889501F92354561E0023DA73 /* OpportProcessCustomerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889501F82354561E0023DA73 /* OpportProcessCustomerController.storyboard */; };
+		889501FC235456410023DA73 /* AddOportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501FB235456410023DA73 /* AddOportController.swift */; };
+		889501FE2354565B0023DA73 /* AddProductController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889501FD2354565B0023DA73 /* AddProductController.swift */; };
+		88950202235456A50023DA73 /* AddOpportController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88950201235456A50023DA73 /* AddOpportController.storyboard */; };
+		88950205235456C80023DA73 /* EditOpportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950204235456C80023DA73 /* EditOpportController.swift */; };
+		88950207235456E60023DA73 /* ListEditProductOpportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950206235456E60023DA73 /* ListEditProductOpportController.swift */; };
+		88950209235456FB0023DA73 /* EditProductOpportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950208235456FB0023DA73 /* EditProductOpportController.swift */; };
+		8895020B235457130023DA73 /* EditOpportController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895020A235457130023DA73 /* EditOpportController.storyboard */; };
+		8895020E2354573D0023DA73 /* TakeCareOportController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895020D2354573D0023DA73 /* TakeCareOportController.swift */; };
+		88950210235457550023DA73 /* TakeCareOpportDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895020F235457550023DA73 /* TakeCareOpportDetailController.swift */; };
+		889502122354576C0023DA73 /* TakeCareOpportProductDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889502112354576C0023DA73 /* TakeCareOpportProductDetailController.swift */; };
+		88950214235457850023DA73 /* InfoOpportCustomerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88950213235457850023DA73 /* InfoOpportCustomerController.storyboard */; };
+		88950217235457C30023DA73 /* ListCustomerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950216235457C30023DA73 /* ListCustomerViewController.swift */; };
+		8895021A235457E90023DA73 /* InforCustomerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950219235457E90023DA73 /* InforCustomerModel.swift */; };
+		8895021C235457FE0023DA73 /* Customer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895021B235457FE0023DA73 /* Customer.swift */; };
+		8895021E235458110023DA73 /* ContactCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895021D235458110023DA73 /* ContactCustomer.swift */; };
+		88950221235458360023DA73 /* RequestInfoCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950220235458360023DA73 /* RequestInfoCustomer.swift */; };
+		889502232354584F0023DA73 /* RequestCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889502222354584F0023DA73 /* RequestCustomer.swift */; };
+		88950227235458780023DA73 /* CustomerDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950225235458780023DA73 /* CustomerDetailCell.swift */; };
+		88950228235458780023DA73 /* CustomerDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88950226235458780023DA73 /* CustomerDetailCell.xib */; };
+		8895022B235458A70023DA73 /* CustomerInforTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950229235458A70023DA73 /* CustomerInforTableViewCell.swift */; };
+		8895022C235458A70023DA73 /* CustomerInforTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895022A235458A70023DA73 /* CustomerInforTableViewCell.xib */; };
+		8895022F235458DB0023DA73 /* ListCustomer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895022E235458DB0023DA73 /* ListCustomer.storyboard */; };
+		88950233235459200023DA73 /* CustomerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950232235459200023DA73 /* CustomerDetailController.swift */; };
+		88950235235459360023DA73 /* InfoCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950234235459360023DA73 /* InfoCustomerController.swift */; };
+		889502372354594C0023DA73 /* InfoContactCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889502362354594C0023DA73 /* InfoContactCustomerController.swift */; };
+		88950239235459670023DA73 /* AddContactCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88950238235459670023DA73 /* AddContactCustomerController.swift */; };
+		8895023B2354598B0023DA73 /* InfoCustomerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895023A2354598B0023DA73 /* InfoCustomerController.storyboard */; };
+		8895023E235459D20023DA73 /* EditCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895023D235459D20023DA73 /* EditCustomerController.swift */; };
+		88950240235459FC0023DA73 /* EditContactLHCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895023F235459FC0023DA73 /* EditContactLHCController.swift */; };
+		8895024223545A1A0023DA73 /* AddContactLHCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895024123545A1A0023DA73 /* AddContactLHCController.swift */; };
+		8895024423545A3E0023DA73 /* EditCustomerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895024323545A3E0023DA73 /* EditCustomerController.storyboard */; };
+		8895024723545A950023DA73 /* AddCustomerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895024623545A950023DA73 /* AddCustomerController.swift */; };
+		8895024923545AAD0023DA73 /* AddContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895024823545AAD0023DA73 /* AddContactController.swift */; };
+		8895024B23545ACA0023DA73 /* AddCustomerController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895024A23545ACA0023DA73 /* AddCustomerController.storyboard */; };
+		8895024E23545B180023DA73 /* SellHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895024D23545B180023DA73 /* SellHomeViewController.swift */; };
+		8895025323545B710023DA73 /* SellMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895025223545B710023DA73 /* SellMain.storyboard */; };
+		8895025923545BB00023DA73 /* OderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895025723545BB00023DA73 /* OderTableViewCell.swift */; };
+		8895025A23545BB00023DA73 /* OderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8895025823545BB00023DA73 /* OderTableViewCell.xib */; };
+		8895025D23545BE90023DA73 /* ListOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895025C23545BE90023DA73 /* ListOrderModel.swift */; };
+		8895025F23545BFC0023DA73 /* InfoOrderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895025E23545BFC0023DA73 /* InfoOrderModel.swift */; };
+		8895026223545C170023DA73 /* ListOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895026123545C170023DA73 /* ListOrderController.swift */; };
+		8895026523545C390023DA73 /* FilterOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895026423545C390023DA73 /* FilterOrderController.swift */; };
+		8895026723545C510023DA73 /* FilterOrderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895026623545C510023DA73 /* FilterOrderController.storyboard */; };
+		8895026C23545C960023DA73 /* EditListProductOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895026B23545C960023DA73 /* EditListProductOrderController.swift */; };
+		8895026E23545CAA0023DA73 /* EditProductOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895026D23545CAA0023DA73 /* EditProductOrderController.swift */; };
+		8895027023545CCB0023DA73 /* EditOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895026F23545CCB0023DA73 /* EditOrderController.swift */; };
+		8895027223545CED0023DA73 /* EditOrderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895027123545CED0023DA73 /* EditOrderController.storyboard */; };
+		8895027523545D100023DA73 /* AddOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895027423545D100023DA73 /* AddOrderController.swift */; };
+		8895027723545D2E0023DA73 /* AddOrderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895027623545D2E0023DA73 /* AddOrderController.storyboard */; };
+		8895027A23545D520023DA73 /* InfoOrderContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895027923545D520023DA73 /* InfoOrderContentController.swift */; };
+		8895027C23545D680023DA73 /* InfoOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895027B23545D680023DA73 /* InfoOrderController.swift */; };
+		8895027E23545D7F0023DA73 /* InfoProductOrderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8895027D23545D7F0023DA73 /* InfoProductOrderController.swift */; };
+		8895028023545D960023DA73 /* InfoOrderController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8895027F23545D960023DA73 /* InfoOrderController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5F02EC597F21A4C21B306A8E /* Pods-AZ CRM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZ CRM.release.xcconfig"; path = "Target Support Files/Pods-AZ CRM/Pods-AZ CRM.release.xcconfig"; sourceTree = "<group>"; };
+		83798186AC73B6FFC13DA603 /* Pods-AZ CRM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AZ CRM.debug.xcconfig"; path = "Target Support Files/Pods-AZ CRM/Pods-AZ CRM.debug.xcconfig"; sourceTree = "<group>"; };
 		887F84FE235424120040D25B /* AZ CRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AZ CRM.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		887F8501235424120040D25B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		887F8503235424120040D25B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		887F8506235424120040D25B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		887F8509235424120040D25B /* AZ_CRM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AZ_CRM.xcdatamodel; sourceTree = "<group>"; };
 		887F850B235424230040D25B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		887F850E235424230040D25B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		887F8510235424230040D25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8895009E2354270A0023DA73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		889500A0235427F30023DA73 /* AZ CRM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AZ CRM.entitlements"; sourceTree = "<group>"; };
+		889500A7235429890023DA73 /* AlertRequestApiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRequestApiController.swift; sourceTree = "<group>"; };
+		889500A92354299F0023DA73 /* AttributedTextBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedTextBlock.swift; sourceTree = "<group>"; };
+		889500AB235429B90023DA73 /* TextViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewerViewController.swift; sourceTree = "<group>"; };
+		889500AE235429E60023DA73 /* AlertRequestApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRequestApi.swift; sourceTree = "<group>"; };
+		889500B0235429FE0023DA73 /* SearchHistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryManager.swift; sourceTree = "<group>"; };
+		889500B323542A180023DA73 /* AlertRequestApiInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRequestApiInfo.swift; sourceTree = "<group>"; };
+		889500B523542A250023DA73 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		889500B723542A330023DA73 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		889500BA23542A500023DA73 /* AlertTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTableViewCell.swift; sourceTree = "<group>"; };
+		889500BC23542A5C0023DA73 /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		889500BE23542A820023DA73 /* UItextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UItextFieldExtension.swift; sourceTree = "<group>"; };
+		889500C023542A910023DA73 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		889500C223542A9F0023DA73 /* Common+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Common+Extensions.swift"; sourceTree = "<group>"; };
+		889500C423542AAE0023DA73 /* UIAlertController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extensions.swift"; sourceTree = "<group>"; };
+		889500C623542ABD0023DA73 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		889500C923542BD90023DA73 /* Reach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reach.swift; sourceTree = "<group>"; };
+		889500CC23542BF50023DA73 /* SwiftyInnerShadowLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyInnerShadowLayer.swift; sourceTree = "<group>"; };
+		889500CE23542C180023DA73 /* SwiftyInnerShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyInnerShadowView.swift; sourceTree = "<group>"; };
+		889500D123542CE40023DA73 /* alarm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = alarm.mp3; path = ../../../../alarm.mp3; sourceTree = "<group>"; };
+		889500D423542CF30023DA73 /* AlarmSchedulerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmSchedulerDelegate.swift; sourceTree = "<group>"; };
+		889500D623542D000023DA73 /* AlarmItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmItem.swift; sourceTree = "<group>"; };
+		889500D823542D0D0023DA73 /* AlarmList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmList.swift; sourceTree = "<group>"; };
+		889500DA23542D1B0023DA73 /* Scheduler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scheduler.swift; sourceTree = "<group>"; };
+		889500DC23542D280023DA73 /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
+		889500DF23542D420023DA73 /* SkyFloatingLabelTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextField.swift; sourceTree = "<group>"; };
+		889500E123542D5A0023DA73 /* SkyFloatingLabelTextFieldWithIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyFloatingLabelTextFieldWithIcon.swift; sourceTree = "<group>"; };
+		889500E323542D690023DA73 /* UITextField+fixCaretPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+fixCaretPosition.swift"; sourceTree = "<group>"; };
+		889500E623542D840023DA73 /* SJContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJContentView.swift; sourceTree = "<group>"; };
+		889500E823542D930023DA73 /* SJSegmentedScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSegmentedScrollView.swift; sourceTree = "<group>"; };
+		889500EA23542DA30023DA73 /* SJSegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSegmentedViewController.swift; sourceTree = "<group>"; };
+		889500EC23542DB30023DA73 /* SJSegmentTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSegmentTab.swift; sourceTree = "<group>"; };
+		889500EE23542DC30023DA73 /* SJSegmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJSegmentView.swift; sourceTree = "<group>"; };
+		889500F023542DD30023DA73 /* SJShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJShadow.swift; sourceTree = "<group>"; };
+		889500F223542DE00023DA73 /* SJUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SJUtil.swift; sourceTree = "<group>"; };
+		889500F523542DFB0023DA73 /* Swipeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swipeable.swift; sourceTree = "<group>"; };
+		889500F723542E090023DA73 /* SwipeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAnimator.swift; sourceTree = "<group>"; };
+		889500F923542E160023DA73 /* SwipeAccessibilityCustomAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAccessibilityCustomAction.swift; sourceTree = "<group>"; };
+		889500FB23542E240023DA73 /* SwipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeController.swift; sourceTree = "<group>"; };
+		889500FD23542E340023DA73 /* SwipeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableCell.swift; sourceTree = "<group>"; };
+		889500FF23542E450023DA73 /* SwipeTableViewCell+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipeTableViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		8895010123542E5E0023DA73 /* SwipeTableViewCell+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipeTableViewCell+Display.swift"; sourceTree = "<group>"; };
+		8895010323542E6E0023DA73 /* SwipeTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTableViewCellDelegate.swift; sourceTree = "<group>"; };
+		8895010523542E7F0023DA73 /* SwipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		8895010723542E900023DA73 /* SwipeCollectionViewCell+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipeCollectionViewCell+Accessibility.swift"; sourceTree = "<group>"; };
+		8895010923542EA20023DA73 /* SwipeCollectionViewCell+Display.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwipeCollectionViewCell+Display.swift"; sourceTree = "<group>"; };
+		8895010B23542EB20023DA73 /* SwipeCollectionViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeCollectionViewCellDelegate.swift; sourceTree = "<group>"; };
+		8895010D23542EC10023DA73 /* SwipeTransitionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeTransitionLayout.swift; sourceTree = "<group>"; };
+		8895010F23542ED00023DA73 /* SwipeOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeOptions.swift; sourceTree = "<group>"; };
+		8895011123542EE40023DA73 /* SwipeActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionsView.swift; sourceTree = "<group>"; };
+		8895011323542EFB0023DA73 /* SwipeAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeAction.swift; sourceTree = "<group>"; };
+		8895011523542F0A0023DA73 /* SwipeActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionButton.swift; sourceTree = "<group>"; };
+		8895011723542F190023DA73 /* SwipeActionTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeActionTransitioning.swift; sourceTree = "<group>"; };
+		8895011923542F280023DA73 /* SwipeExpansionStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeExpansionStyle.swift; sourceTree = "<group>"; };
+		8895011B23542F390023DA73 /* SwipeExpanding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeExpanding.swift; sourceTree = "<group>"; };
+		8895011D23542F490023DA73 /* SwipeFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeFeedback.swift; sourceTree = "<group>"; };
+		8895011F23542F560023DA73 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8895012123542F660023DA73 /* Shared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shared.swift; sourceTree = "<group>"; };
+		8895012323542F8D0023DA73 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		8895012523542F9B0023DA73 /* CheckPerform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPerform.swift; sourceTree = "<group>"; };
+		8895012723542FA80023DA73 /* RequestGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestGroups.swift; sourceTree = "<group>"; };
+		8895012923542FBD0023DA73 /* GroupsApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsApiModel.swift; sourceTree = "<group>"; };
+		8895012B23542FCD0023DA73 /* LogFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogFile.swift; sourceTree = "<group>"; };
+		8895012D23542FDC0023DA73 /* SendNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendNotification.swift; sourceTree = "<group>"; };
+		8895012F235431E30023DA73 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		88950130235431E30023DA73 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		889501332354320F0023DA73 /* StaffTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaffTableViewCell.swift; sourceTree = "<group>"; };
+		889501342354320F0023DA73 /* StaffTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StaffTableViewCell.xib; sourceTree = "<group>"; };
+		88950137235432490023DA73 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		889501392354325C0023DA73 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		8895013B2354326F0023DA73 /* AZCRMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AZCRMViewController.swift; sourceTree = "<group>"; };
+		8895013E235432A50023DA73 /* ScheduleHomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleHomeController.swift; sourceTree = "<group>"; };
+		88950141235432CA0023DA73 /* ScheduleMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleMain.storyboard; sourceTree = "<group>"; };
+		88950144235433260023DA73 /* ListScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScheduleController.swift; sourceTree = "<group>"; };
+		88950147235433460023DA73 /* ScheduleRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequest.swift; sourceTree = "<group>"; };
+		8895014A2354336C0023DA73 /* ListScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScheduleCell.swift; sourceTree = "<group>"; };
+		8895014B2354336C0023DA73 /* ListScheduleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListScheduleCell.xib; sourceTree = "<group>"; };
+		8895014F2354339A0023DA73 /* ListScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScheduleModel.swift; sourceTree = "<group>"; };
+		88950155235433CE0023DA73 /* InfoScheduleController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoScheduleController.storyboard; sourceTree = "<group>"; };
+		88950157235433EB0023DA73 /* InfoScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoScheduleController.swift; sourceTree = "<group>"; };
+		889501592354340B0023DA73 /* EditScheduleController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditScheduleController.storyboard; sourceTree = "<group>"; };
+		8895015B235434150023DA73 /* EditSchedulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditSchedulesController.swift; sourceTree = "<group>"; };
+		8895015D235434520023DA73 /* AddSchedulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchedulesController.swift; sourceTree = "<group>"; };
+		8895015F2354346E0023DA73 /* AddScheduleController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddScheduleController.storyboard; sourceTree = "<group>"; };
+		88950162235434B00023DA73 /* ListTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskController.swift; sourceTree = "<group>"; };
+		88950165235434DE0023DA73 /* ListTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskCell.swift; sourceTree = "<group>"; };
+		88950166235434DE0023DA73 /* ListTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTaskCell.xib; sourceTree = "<group>"; };
+		88950169235435060023DA73 /* InfoStaffTaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStaffTaskCell.swift; sourceTree = "<group>"; };
+		8895016A235435060023DA73 /* InfoStaffTaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoStaffTaskCell.xib; sourceTree = "<group>"; };
+		8895016D2354352D0023DA73 /* FollowWorkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowWorkCell.swift; sourceTree = "<group>"; };
+		8895016E2354352D0023DA73 /* FollowWorkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowWorkCell.xib; sourceTree = "<group>"; };
+		889501722354355E0023DA73 /* TaskRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRequest.swift; sourceTree = "<group>"; };
+		889501742354356D0023DA73 /* InfoTaskRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTaskRequest.swift; sourceTree = "<group>"; };
+		88950176235435800023DA73 /* FollowWorkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowWorkRequest.swift; sourceTree = "<group>"; };
+		88950179235435970023DA73 /* ListTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTaskModel.swift; sourceTree = "<group>"; };
+		8895017B235435A70023DA73 /* InfoTaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTaskModel.swift; sourceTree = "<group>"; };
+		8895017D235435B80023DA73 /* FollowWorkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowWorkModel.swift; sourceTree = "<group>"; };
+		88950185235436060023DA73 /* InfoStaffTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoStaffTaskController.swift; sourceTree = "<group>"; };
+		889501872354361D0023DA73 /* InfoTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTaskController.swift; sourceTree = "<group>"; };
+		88950189235436310023DA73 /* InfoTaskContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTaskContentController.swift; sourceTree = "<group>"; };
+		8895018B235436440023DA73 /* InfoTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoTaskController.storyboard; sourceTree = "<group>"; };
+		8895018D235436700023DA73 /* AddStaffTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStaffTaskController.swift; sourceTree = "<group>"; };
+		8895018F235436810023DA73 /* AddTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskController.swift; sourceTree = "<group>"; };
+		889501912354369D0023DA73 /* AddTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddTaskController.storyboard; sourceTree = "<group>"; };
+		88950193235436BD0023DA73 /* EditStaffTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditStaffTaskController.swift; sourceTree = "<group>"; };
+		88950195235436D40023DA73 /* EditListStaffController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListStaffController.swift; sourceTree = "<group>"; };
+		88950197235436F10023DA73 /* EditTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskController.swift; sourceTree = "<group>"; };
+		88950199235437060023DA73 /* EditTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditTaskController.storyboard; sourceTree = "<group>"; };
+		8895019B235437260023DA73 /* AddProcessTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProcessTaskController.swift; sourceTree = "<group>"; };
+		8895019D2354373C0023DA73 /* FllowWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FllowWorkController.swift; sourceTree = "<group>"; };
+		8895019F235437510023DA73 /* ProcessTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProcessTaskController.storyboard; sourceTree = "<group>"; };
+		889501A1235437720023DA73 /* FilterTaskController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTaskController.swift; sourceTree = "<group>"; };
+		889501A32354378B0023DA73 /* FilterTaskController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterTaskController.storyboard; sourceTree = "<group>"; };
+		889501A62354503B0023DA73 /* CustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerViewController.swift; sourceTree = "<group>"; };
+		889501A9235450680023DA73 /* CustomerMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CustomerMain.storyboard; sourceTree = "<group>"; };
+		889501AC235450A80023DA73 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		889501AF235450D20023DA73 /* RequetsContact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequetsContact.swift; sourceTree = "<group>"; };
+		889501B2235450F30023DA73 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		889501B4235451040023DA73 /* ListInfoContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInfoContactController.swift; sourceTree = "<group>"; };
+		889501B7235452400023DA73 /* InfoContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContactController.swift; sourceTree = "<group>"; };
+		889501B9235452650023DA73 /* EditContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactController.swift; sourceTree = "<group>"; };
+		889501BB235452850023DA73 /* AddContactControllerLH.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactControllerLH.swift; sourceTree = "<group>"; };
+		889501BE235452B40023DA73 /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
+		889501BF235452B40023DA73 /* ContactListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListTableViewCell.xib; sourceTree = "<group>"; };
+		889501C3235452E20023DA73 /* ListContact.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListContact.storyboard; sourceTree = "<group>"; };
+		889501C6235453600023DA73 /* OpportunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportunityViewController.swift; sourceTree = "<group>"; };
+		889501C9235453870023DA73 /* OpportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportModel.swift; sourceTree = "<group>"; };
+		889501CB2354539D0023DA73 /* OportProcessModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OportProcessModel.swift; sourceTree = "<group>"; };
+		889501CD235453B50023DA73 /* DelegateDataProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateDataProduct.swift; sourceTree = "<group>"; };
+		889501CF235453CC0023DA73 /* TakeCareOpportModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOpportModel.swift; sourceTree = "<group>"; };
+		889501D2235453F70023DA73 /* OpportTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportTableViewCell.swift; sourceTree = "<group>"; };
+		889501D3235453F70023DA73 /* OpportTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpportTableViewCell.xib; sourceTree = "<group>"; };
+		889501D6235454380023DA73 /* OportProcessCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OportProcessCell.swift; sourceTree = "<group>"; };
+		889501D7235454380023DA73 /* OportProcessCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OportProcessCell.xib; sourceTree = "<group>"; };
+		889501DA235454690023DA73 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
+		889501DB235454690023DA73 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
+		889501DE2354549B0023DA73 /* TakeCareOportCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOportCell.swift; sourceTree = "<group>"; };
+		889501DF2354549B0023DA73 /* TakeCareOportCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeCareOportCell.xib; sourceTree = "<group>"; };
+		889501E2235454C20023DA73 /* TakeCareOpportProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOpportProductCell.swift; sourceTree = "<group>"; };
+		889501E3235454C20023DA73 /* TakeCareOpportProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakeCareOpportProductCell.xib; sourceTree = "<group>"; };
+		889501E7235455070023DA73 /* ListOpport.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListOpport.storyboard; sourceTree = "<group>"; };
+		889501EA235455320023DA73 /* RequestOportProcess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOportProcess.swift; sourceTree = "<group>"; };
+		889501EC235455440023DA73 /* RequestTakeCareOpport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "\U0010RequestTakeCareOpport.swift"; sourceTree = "<group>"; };
+		889501EE2354555E0023DA73 /* RequestOport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestOport.swift; sourceTree = "<group>"; };
+		889501F2235455CE0023DA73 /* OpportProcessController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpportProcessController.swift; sourceTree = "<group>"; };
+		889501F4235455E30023DA73 /* HandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandingViewController.swift; sourceTree = "<group>"; };
+		889501F6235455FC0023DA73 /* AddSchedulesOpportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSchedulesOpportController.swift; sourceTree = "<group>"; };
+		889501F82354561E0023DA73 /* OpportProcessCustomerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = OpportProcessCustomerController.storyboard; sourceTree = "<group>"; };
+		889501FB235456410023DA73 /* AddOportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOportController.swift; sourceTree = "<group>"; };
+		889501FD2354565B0023DA73 /* AddProductController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductController.swift; sourceTree = "<group>"; };
+		88950201235456A50023DA73 /* AddOpportController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOpportController.storyboard; sourceTree = "<group>"; };
+		88950204235456C80023DA73 /* EditOpportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOpportController.swift; sourceTree = "<group>"; };
+		88950206235456E60023DA73 /* ListEditProductOpportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEditProductOpportController.swift; sourceTree = "<group>"; };
+		88950208235456FB0023DA73 /* EditProductOpportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductOpportController.swift; sourceTree = "<group>"; };
+		8895020A235457130023DA73 /* EditOpportController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOpportController.storyboard; sourceTree = "<group>"; };
+		8895020D2354573D0023DA73 /* TakeCareOportController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOportController.swift; sourceTree = "<group>"; };
+		8895020F235457550023DA73 /* TakeCareOpportDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOpportDetailController.swift; sourceTree = "<group>"; };
+		889502112354576C0023DA73 /* TakeCareOpportProductDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakeCareOpportProductDetailController.swift; sourceTree = "<group>"; };
+		88950213235457850023DA73 /* InfoOpportCustomerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoOpportCustomerController.storyboard; sourceTree = "<group>"; };
+		88950216235457C30023DA73 /* ListCustomerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCustomerViewController.swift; sourceTree = "<group>"; };
+		88950219235457E90023DA73 /* InforCustomerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InforCustomerModel.swift; sourceTree = "<group>"; };
+		8895021B235457FE0023DA73 /* Customer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Customer.swift; sourceTree = "<group>"; };
+		8895021D235458110023DA73 /* ContactCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCustomer.swift; sourceTree = "<group>"; };
+		88950220235458360023DA73 /* RequestInfoCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestInfoCustomer.swift; sourceTree = "<group>"; };
+		889502222354584F0023DA73 /* RequestCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCustomer.swift; sourceTree = "<group>"; };
+		88950225235458780023DA73 /* CustomerDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailCell.swift; sourceTree = "<group>"; };
+		88950226235458780023DA73 /* CustomerDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerDetailCell.xib; sourceTree = "<group>"; };
+		88950229235458A70023DA73 /* CustomerInforTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerInforTableViewCell.swift; sourceTree = "<group>"; };
+		8895022A235458A70023DA73 /* CustomerInforTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerInforTableViewCell.xib; sourceTree = "<group>"; };
+		8895022E235458DB0023DA73 /* ListCustomer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ListCustomer.storyboard; sourceTree = "<group>"; };
+		88950232235459200023DA73 /* CustomerDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetailController.swift; sourceTree = "<group>"; };
+		88950234235459360023DA73 /* InfoCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoCustomerController.swift; sourceTree = "<group>"; };
+		889502362354594C0023DA73 /* InfoContactCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoContactCustomerController.swift; sourceTree = "<group>"; };
+		88950238235459670023DA73 /* AddContactCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactCustomerController.swift; sourceTree = "<group>"; };
+		8895023A2354598B0023DA73 /* InfoCustomerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoCustomerController.storyboard; sourceTree = "<group>"; };
+		8895023D235459D20023DA73 /* EditCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCustomerController.swift; sourceTree = "<group>"; };
+		8895023F235459FC0023DA73 /* EditContactLHCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactLHCController.swift; sourceTree = "<group>"; };
+		8895024123545A1A0023DA73 /* AddContactLHCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactLHCController.swift; sourceTree = "<group>"; };
+		8895024323545A3E0023DA73 /* EditCustomerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditCustomerController.storyboard; sourceTree = "<group>"; };
+		8895024623545A950023DA73 /* AddCustomerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomerController.swift; sourceTree = "<group>"; };
+		8895024823545AAD0023DA73 /* AddContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactController.swift; sourceTree = "<group>"; };
+		8895024A23545ACA0023DA73 /* AddCustomerController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCustomerController.storyboard; sourceTree = "<group>"; };
+		8895024D23545B180023DA73 /* SellHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellHomeViewController.swift; sourceTree = "<group>"; };
+		8895025223545B710023DA73 /* SellMain.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SellMain.storyboard; sourceTree = "<group>"; };
+		8895025723545BB00023DA73 /* OderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OderTableViewCell.swift; sourceTree = "<group>"; };
+		8895025823545BB00023DA73 /* OderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OderTableViewCell.xib; sourceTree = "<group>"; };
+		8895025C23545BE90023DA73 /* ListOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrderModel.swift; sourceTree = "<group>"; };
+		8895025E23545BFC0023DA73 /* InfoOrderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOrderModel.swift; sourceTree = "<group>"; };
+		8895026123545C170023DA73 /* ListOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOrderController.swift; sourceTree = "<group>"; };
+		8895026423545C390023DA73 /* FilterOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOrderController.swift; sourceTree = "<group>"; };
+		8895026623545C510023DA73 /* FilterOrderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FilterOrderController.storyboard; sourceTree = "<group>"; };
+		8895026B23545C960023DA73 /* EditListProductOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditListProductOrderController.swift; sourceTree = "<group>"; };
+		8895026D23545CAA0023DA73 /* EditProductOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProductOrderController.swift; sourceTree = "<group>"; };
+		8895026F23545CCB0023DA73 /* EditOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOrderController.swift; sourceTree = "<group>"; };
+		8895027123545CED0023DA73 /* EditOrderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditOrderController.storyboard; sourceTree = "<group>"; };
+		8895027423545D100023DA73 /* AddOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderController.swift; sourceTree = "<group>"; };
+		8895027623545D2E0023DA73 /* AddOrderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddOrderController.storyboard; sourceTree = "<group>"; };
+		8895027923545D520023DA73 /* InfoOrderContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOrderContentController.swift; sourceTree = "<group>"; };
+		8895027B23545D680023DA73 /* InfoOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoOrderController.swift; sourceTree = "<group>"; };
+		8895027D23545D7F0023DA73 /* InfoProductOrderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoProductOrderController.swift; sourceTree = "<group>"; };
+		8895027F23545D960023DA73 /* InfoOrderController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InfoOrderController.storyboard; sourceTree = "<group>"; };
+		DCF1E4859173CBEFB8248026 /* Pods_AZ_CRM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AZ_CRM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +436,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FFF8056ACE32AFD54FA77B /* Pods_AZ_CRM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +448,8 @@
 			children = (
 				887F8500235424120040D25B /* AZ CRM */,
 				887F84FF235424120040D25B /* Products */,
+				D9A3C2C23968EE21BD31A2D8 /* Pods */,
+				EF6A982A6D3DEACF17EF4D73 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +464,801 @@
 		887F8500235424120040D25B /* AZ CRM */ = {
 			isa = PBXGroup;
 			children = (
-				887F8501235424120040D25B /* AppDelegate.swift */,
-				887F8503235424120040D25B /* ViewController.swift */,
+				889500A0235427F30023DA73 /* AZ CRM.entitlements */,
+				889500A5235428670023DA73 /* Model */,
+				889500A42354285C0023DA73 /* View */,
+				889500A3235428530023DA73 /* Controller */,
+				889500A22354284D0023DA73 /* Extension + Utilies */,
+				889500A1235428420023DA73 /* Application */,
 				887F8505235424120040D25B /* Main.storyboard */,
 				887F850B235424230040D25B /* Assets.xcassets */,
 				887F850D235424230040D25B /* LaunchScreen.storyboard */,
 				887F8510235424230040D25B /* Info.plist */,
+				8895009E2354270A0023DA73 /* GoogleService-Info.plist */,
 				887F8508235424120040D25B /* AZ_CRM.xcdatamodeld */,
 			);
 			path = "AZ CRM";
+			sourceTree = "<group>";
+		};
+		889500A1235428420023DA73 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				887F8501235424120040D25B /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		889500A22354284D0023DA73 /* Extension + Utilies */ = {
+			isa = PBXGroup;
+			children = (
+				889500A62354297B0023DA73 /* AlertGroupApiModel */,
+				889500BE23542A820023DA73 /* UItextFieldExtension.swift */,
+				889500C023542A910023DA73 /* DatePickerViewController.swift */,
+				889500C223542A9F0023DA73 /* Common+Extensions.swift */,
+				889500C423542AAE0023DA73 /* UIAlertController+Extensions.swift */,
+				889500C623542ABD0023DA73 /* UIView.swift */,
+			);
+			path = "Extension + Utilies";
+			sourceTree = "<group>";
+		};
+		889500A3235428530023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88950137235432490023DA73 /* BaseViewController.swift */,
+				889501392354325C0023DA73 /* LoginScreenViewController.swift */,
+				8895013B2354326F0023DA73 /* AZCRMViewController.swift */,
+				8895024C23545B060023DA73 /* Sell */,
+				889501A52354502C0023DA73 /* Customer */,
+				8895013D235432960023DA73 /* SchedulePH */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		889500A42354285C0023DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8895012F235431E30023DA73 /* CustomTableViewCell.swift */,
+				88950130235431E30023DA73 /* CustomTableViewCell.xib */,
+				889501332354320F0023DA73 /* StaffTableViewCell.swift */,
+				889501342354320F0023DA73 /* StaffTableViewCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		889500A5235428670023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				889500F423542DED0023DA73 /* SwipeCellKit */,
+				889500E523542D760023DA73 /* SegmentScrollView */,
+				889500DE23542D370023DA73 /* SkyFloatingLabelTextField */,
+				889500D023542CBF0023DA73 /* Alarm */,
+				889500CB23542BE60023DA73 /* SwiftyShadow */,
+				889500C823542BCF0023DA73 /* CheckInternet */,
+				8895012323542F8D0023DA73 /* Config.swift */,
+				8895012523542F9B0023DA73 /* CheckPerform.swift */,
+				8895012723542FA80023DA73 /* RequestGroups.swift */,
+				8895012923542FBD0023DA73 /* GroupsApiModel.swift */,
+				8895012B23542FCD0023DA73 /* LogFile.swift */,
+				8895012D23542FDC0023DA73 /* SendNotification.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		889500A62354297B0023DA73 /* AlertGroupApiModel */ = {
+			isa = PBXGroup;
+			children = (
+				889500B923542A460023DA73 /* Views */,
+				889500B223542A0C0023DA73 /* Models */,
+				889500AD235429C90023DA73 /* Managers */,
+				889500A7235429890023DA73 /* AlertRequestApiController.swift */,
+				889500A92354299F0023DA73 /* AttributedTextBlock.swift */,
+				889500AB235429B90023DA73 /* TextViewerViewController.swift */,
+			);
+			path = AlertGroupApiModel;
+			sourceTree = "<group>";
+		};
+		889500AD235429C90023DA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				889500AE235429E60023DA73 /* AlertRequestApi.swift */,
+				889500B0235429FE0023DA73 /* SearchHistoryManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		889500B223542A0C0023DA73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				889500B323542A180023DA73 /* AlertRequestApiInfo.swift */,
+				889500B523542A250023DA73 /* Location.swift */,
+				889500B723542A330023DA73 /* Address.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		889500B923542A460023DA73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				889500BA23542A500023DA73 /* AlertTableViewCell.swift */,
+				889500BC23542A5C0023DA73 /* Button.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		889500C823542BCF0023DA73 /* CheckInternet */ = {
+			isa = PBXGroup;
+			children = (
+				889500C923542BD90023DA73 /* Reach.swift */,
+			);
+			path = CheckInternet;
+			sourceTree = "<group>";
+		};
+		889500CB23542BE60023DA73 /* SwiftyShadow */ = {
+			isa = PBXGroup;
+			children = (
+				889500CC23542BF50023DA73 /* SwiftyInnerShadowLayer.swift */,
+				889500CE23542C180023DA73 /* SwiftyInnerShadowView.swift */,
+			);
+			path = SwiftyShadow;
+			sourceTree = "<group>";
+		};
+		889500D023542CBF0023DA73 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				889500D123542CE40023DA73 /* alarm.mp3 */,
+				889500D423542CF30023DA73 /* AlarmSchedulerDelegate.swift */,
+				889500D623542D000023DA73 /* AlarmItem.swift */,
+				889500D823542D0D0023DA73 /* AlarmList.swift */,
+				889500DA23542D1B0023DA73 /* Scheduler.swift */,
+				889500DC23542D280023DA73 /* Alarm.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		889500DE23542D370023DA73 /* SkyFloatingLabelTextField */ = {
+			isa = PBXGroup;
+			children = (
+				889500DF23542D420023DA73 /* SkyFloatingLabelTextField.swift */,
+				889500E123542D5A0023DA73 /* SkyFloatingLabelTextFieldWithIcon.swift */,
+				889500E323542D690023DA73 /* UITextField+fixCaretPosition.swift */,
+			);
+			path = SkyFloatingLabelTextField;
+			sourceTree = "<group>";
+		};
+		889500E523542D760023DA73 /* SegmentScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				889500E623542D840023DA73 /* SJContentView.swift */,
+				889500E823542D930023DA73 /* SJSegmentedScrollView.swift */,
+				889500EA23542DA30023DA73 /* SJSegmentedViewController.swift */,
+				889500EC23542DB30023DA73 /* SJSegmentTab.swift */,
+				889500EE23542DC30023DA73 /* SJSegmentView.swift */,
+				889500F023542DD30023DA73 /* SJShadow.swift */,
+				889500F223542DE00023DA73 /* SJUtil.swift */,
+			);
+			path = SegmentScrollView;
+			sourceTree = "<group>";
+		};
+		889500F423542DED0023DA73 /* SwipeCellKit */ = {
+			isa = PBXGroup;
+			children = (
+				889500F523542DFB0023DA73 /* Swipeable.swift */,
+				889500F723542E090023DA73 /* SwipeAnimator.swift */,
+				889500F923542E160023DA73 /* SwipeAccessibilityCustomAction.swift */,
+				889500FB23542E240023DA73 /* SwipeController.swift */,
+				889500FD23542E340023DA73 /* SwipeTableCell.swift */,
+				889500FF23542E450023DA73 /* SwipeTableViewCell+Accessibility.swift */,
+				8895010123542E5E0023DA73 /* SwipeTableViewCell+Display.swift */,
+				8895010323542E6E0023DA73 /* SwipeTableViewCellDelegate.swift */,
+				8895010523542E7F0023DA73 /* SwipeCollectionViewCell.swift */,
+				8895010723542E900023DA73 /* SwipeCollectionViewCell+Accessibility.swift */,
+				8895010923542EA20023DA73 /* SwipeCollectionViewCell+Display.swift */,
+				8895010B23542EB20023DA73 /* SwipeCollectionViewCellDelegate.swift */,
+				8895010D23542EC10023DA73 /* SwipeTransitionLayout.swift */,
+				8895010F23542ED00023DA73 /* SwipeOptions.swift */,
+				8895011123542EE40023DA73 /* SwipeActionsView.swift */,
+				8895011323542EFB0023DA73 /* SwipeAction.swift */,
+				8895011523542F0A0023DA73 /* SwipeActionButton.swift */,
+				8895011723542F190023DA73 /* SwipeActionTransitioning.swift */,
+				8895011923542F280023DA73 /* SwipeExpansionStyle.swift */,
+				8895011B23542F390023DA73 /* SwipeExpanding.swift */,
+				8895011D23542F490023DA73 /* SwipeFeedback.swift */,
+				8895011F23542F560023DA73 /* Extensions.swift */,
+				8895012123542F660023DA73 /* Shared.swift */,
+			);
+			path = SwipeCellKit;
+			sourceTree = "<group>";
+		};
+		8895013D235432960023DA73 /* SchedulePH */ = {
+			isa = PBXGroup;
+			children = (
+				8895013E235432A50023DA73 /* ScheduleHomeController.swift */,
+				88950161235434A20023DA73 /* Task */,
+				88950140235432B40023DA73 /* Main */,
+				88950143235433130023DA73 /* Schedule */,
+			);
+			path = SchedulePH;
+			sourceTree = "<group>";
+		};
+		88950140235432B40023DA73 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				88950141235432CA0023DA73 /* ScheduleMain.storyboard */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		88950143235433130023DA73 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				88950144235433260023DA73 /* ListScheduleController.swift */,
+				88950151235433AB0023DA73 /* Controller */,
+				8895014E2354338E0023DA73 /* Model */,
+				88950149235433550023DA73 /* View */,
+				88950146235433380023DA73 /* Managers */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		88950146235433380023DA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				88950147235433460023DA73 /* ScheduleRequest.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		88950149235433550023DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8895014A2354336C0023DA73 /* ListScheduleCell.swift */,
+				8895014B2354336C0023DA73 /* ListScheduleCell.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8895014E2354338E0023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8895014F2354339A0023DA73 /* ListScheduleModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		88950151235433AB0023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88950154235433BC0023DA73 /* Info */,
+				88950153235433B80023DA73 /* Edit */,
+				88950152235433B30023DA73 /* Add */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		88950152235433B30023DA73 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				8895015D235434520023DA73 /* AddSchedulesController.swift */,
+				8895015F2354346E0023DA73 /* AddScheduleController.storyboard */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		88950153235433B80023DA73 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				889501592354340B0023DA73 /* EditScheduleController.storyboard */,
+				8895015B235434150023DA73 /* EditSchedulesController.swift */,
+			);
+			name = Edit;
+			sourceTree = "<group>";
+		};
+		88950154235433BC0023DA73 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				88950155235433CE0023DA73 /* InfoScheduleController.storyboard */,
+				88950157235433EB0023DA73 /* InfoScheduleController.swift */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		88950161235434A20023DA73 /* Task */ = {
+			isa = PBXGroup;
+			children = (
+				88950162235434B00023DA73 /* ListTaskController.swift */,
+				8895017F235435C60023DA73 /* Controller */,
+				889501782354358B0023DA73 /* Model */,
+				88950171235435510023DA73 /* Managers */,
+				88950164235434CB0023DA73 /* Vews */,
+			);
+			name = Task;
+			sourceTree = "<group>";
+		};
+		88950164235434CB0023DA73 /* Vews */ = {
+			isa = PBXGroup;
+			children = (
+				88950165235434DE0023DA73 /* ListTaskCell.swift */,
+				88950166235434DE0023DA73 /* ListTaskCell.xib */,
+				88950169235435060023DA73 /* InfoStaffTaskCell.swift */,
+				8895016A235435060023DA73 /* InfoStaffTaskCell.xib */,
+				8895016D2354352D0023DA73 /* FollowWorkCell.swift */,
+				8895016E2354352D0023DA73 /* FollowWorkCell.xib */,
+			);
+			name = Vews;
+			sourceTree = "<group>";
+		};
+		88950171235435510023DA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				889501722354355E0023DA73 /* TaskRequest.swift */,
+				889501742354356D0023DA73 /* InfoTaskRequest.swift */,
+				88950176235435800023DA73 /* FollowWorkRequest.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		889501782354358B0023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88950179235435970023DA73 /* ListTaskModel.swift */,
+				8895017B235435A70023DA73 /* InfoTaskModel.swift */,
+				8895017D235435B80023DA73 /* FollowWorkModel.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8895017F235435C60023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88950184235435F30023DA73 /* Info */,
+				88950183235435EE0023DA73 /* Add */,
+				88950182235435E70023DA73 /* Edit */,
+				88950181235435DF0023DA73 /* Process */,
+				88950180235435DA0023DA73 /* Filter */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		88950180235435DA0023DA73 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				889501A1235437720023DA73 /* FilterTaskController.swift */,
+				889501A32354378B0023DA73 /* FilterTaskController.storyboard */,
+			);
+			name = Filter;
+			sourceTree = "<group>";
+		};
+		88950181235435DF0023DA73 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				8895019B235437260023DA73 /* AddProcessTaskController.swift */,
+				8895019D2354373C0023DA73 /* FllowWorkController.swift */,
+				8895019F235437510023DA73 /* ProcessTaskController.storyboard */,
+			);
+			name = Process;
+			sourceTree = "<group>";
+		};
+		88950182235435E70023DA73 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				88950193235436BD0023DA73 /* EditStaffTaskController.swift */,
+				88950195235436D40023DA73 /* EditListStaffController.swift */,
+				88950197235436F10023DA73 /* EditTaskController.swift */,
+				88950199235437060023DA73 /* EditTaskController.storyboard */,
+			);
+			name = Edit;
+			sourceTree = "<group>";
+		};
+		88950183235435EE0023DA73 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				8895018D235436700023DA73 /* AddStaffTaskController.swift */,
+				8895018F235436810023DA73 /* AddTaskController.swift */,
+				889501912354369D0023DA73 /* AddTaskController.storyboard */,
+			);
+			name = Add;
+			sourceTree = "<group>";
+		};
+		88950184235435F30023DA73 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				88950185235436060023DA73 /* InfoStaffTaskController.swift */,
+				889501872354361D0023DA73 /* InfoTaskController.swift */,
+				88950189235436310023DA73 /* InfoTaskContentController.swift */,
+				8895018B235436440023DA73 /* InfoTaskController.storyboard */,
+			);
+			name = Info;
+			sourceTree = "<group>";
+		};
+		889501A52354502C0023DA73 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				889501A62354503B0023DA73 /* CustomerViewController.swift */,
+				88950215235457B50023DA73 /* List Customer */,
+				889501C52354534C0023DA73 /* Opport */,
+				889501A8235450530023DA73 /* Main */,
+				889501AB235450910023DA73 /* Contact */,
+			);
+			path = Customer;
+			sourceTree = "<group>";
+		};
+		889501A8235450530023DA73 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				889501A9235450680023DA73 /* CustomerMain.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		889501AB235450910023DA73 /* Contact */ = {
+			isa = PBXGroup;
+			children = (
+				889501BD2354529B0023DA73 /* Views */,
+				889501B6235451170023DA73 /* Controller */,
+				889501B1235450E50023DA73 /* Model */,
+				889501AE235450C50023DA73 /* Manager */,
+				889501AC235450A80023DA73 /* ContactViewController.swift */,
+			);
+			path = Contact;
+			sourceTree = "<group>";
+		};
+		889501AE235450C50023DA73 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				889501AF235450D20023DA73 /* RequetsContact.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		889501B1235450E50023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				889501B2235450F30023DA73 /* ContactModel.swift */,
+				889501B4235451040023DA73 /* ListInfoContactController.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		889501B6235451170023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				889501B7235452400023DA73 /* InfoContactController.swift */,
+				889501B9235452650023DA73 /* EditContactController.swift */,
+				889501BB235452850023DA73 /* AddContactControllerLH.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		889501BD2354529B0023DA73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				889501C2235452D30023DA73 /* Main List Contact */,
+				889501BE235452B40023DA73 /* ContactListTableViewCell.swift */,
+				889501BF235452B40023DA73 /* ContactListTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		889501C2235452D30023DA73 /* Main List Contact */ = {
+			isa = PBXGroup;
+			children = (
+				889501C3235452E20023DA73 /* ListContact.storyboard */,
+			);
+			path = "Main List Contact";
+			sourceTree = "<group>";
+		};
+		889501C52354534C0023DA73 /* Opport */ = {
+			isa = PBXGroup;
+			children = (
+				889501F0235455880023DA73 /* Controller */,
+				889501E9235455260023DA73 /* Managers */,
+				889501D1235453DF0023DA73 /* View */,
+				889501C8235453760023DA73 /* Model */,
+				889501C6235453600023DA73 /* OpportunityViewController.swift */,
+			);
+			path = Opport;
+			sourceTree = "<group>";
+		};
+		889501C8235453760023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				889501C9235453870023DA73 /* OpportModel.swift */,
+				889501CB2354539D0023DA73 /* OportProcessModel.swift */,
+				889501CD235453B50023DA73 /* DelegateDataProduct.swift */,
+				889501CF235453CC0023DA73 /* TakeCareOpportModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		889501D1235453DF0023DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				889501E6235454FA0023DA73 /* Main List Opport */,
+				889501D2235453F70023DA73 /* OpportTableViewCell.swift */,
+				889501D3235453F70023DA73 /* OpportTableViewCell.xib */,
+				889501D6235454380023DA73 /* OportProcessCell.swift */,
+				889501D7235454380023DA73 /* OportProcessCell.xib */,
+				889501DA235454690023DA73 /* ProductTableViewCell.swift */,
+				889501DB235454690023DA73 /* ProductTableViewCell.xib */,
+				889501DE2354549B0023DA73 /* TakeCareOportCell.swift */,
+				889501DF2354549B0023DA73 /* TakeCareOportCell.xib */,
+				889501E2235454C20023DA73 /* TakeCareOpportProductCell.swift */,
+				889501E3235454C20023DA73 /* TakeCareOpportProductCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		889501E6235454FA0023DA73 /* Main List Opport */ = {
+			isa = PBXGroup;
+			children = (
+				889501E7235455070023DA73 /* ListOpport.storyboard */,
+			);
+			path = "Main List Opport";
+			sourceTree = "<group>";
+		};
+		889501E9235455260023DA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				889501EA235455320023DA73 /* RequestOportProcess.swift */,
+				889501EC235455440023DA73 /* RequestTakeCareOpport.swift */,
+				889501EE2354555E0023DA73 /* RequestOport.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		889501F0235455880023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8895020C235457300023DA73 /* Info */,
+				88950203235456B60023DA73 /* Edit */,
+				889501FA235456350023DA73 /* Add */,
+				889501F1235455BD0023DA73 /* Process */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		889501F1235455BD0023DA73 /* Process */ = {
+			isa = PBXGroup;
+			children = (
+				889501F2235455CE0023DA73 /* OpportProcessController.swift */,
+				889501F4235455E30023DA73 /* HandingViewController.swift */,
+				889501F6235455FC0023DA73 /* AddSchedulesOpportController.swift */,
+				889501F82354561E0023DA73 /* OpportProcessCustomerController.storyboard */,
+			);
+			path = Process;
+			sourceTree = "<group>";
+		};
+		889501FA235456350023DA73 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				889501FB235456410023DA73 /* AddOportController.swift */,
+				889501FD2354565B0023DA73 /* AddProductController.swift */,
+				88950201235456A50023DA73 /* AddOpportController.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		88950203235456B60023DA73 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				88950204235456C80023DA73 /* EditOpportController.swift */,
+				88950206235456E60023DA73 /* ListEditProductOpportController.swift */,
+				88950208235456FB0023DA73 /* EditProductOpportController.swift */,
+				8895020A235457130023DA73 /* EditOpportController.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		8895020C235457300023DA73 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				8895020D2354573D0023DA73 /* TakeCareOportController.swift */,
+				8895020F235457550023DA73 /* TakeCareOpportDetailController.swift */,
+				889502112354576C0023DA73 /* TakeCareOpportProductDetailController.swift */,
+				88950213235457850023DA73 /* InfoOpportCustomerController.storyboard */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		88950215235457B50023DA73 /* List Customer */ = {
+			isa = PBXGroup;
+			children = (
+				88950230235458FE0023DA73 /* Controller */,
+				88950224235458610023DA73 /* View */,
+				8895021F235458280023DA73 /* Managers */,
+				88950218235457DB0023DA73 /* Model */,
+				88950216235457C30023DA73 /* ListCustomerViewController.swift */,
+			);
+			path = "List Customer";
+			sourceTree = "<group>";
+		};
+		88950218235457DB0023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				88950219235457E90023DA73 /* InforCustomerModel.swift */,
+				8895021B235457FE0023DA73 /* Customer.swift */,
+				8895021D235458110023DA73 /* ContactCustomer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8895021F235458280023DA73 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				88950220235458360023DA73 /* RequestInfoCustomer.swift */,
+				889502222354584F0023DA73 /* RequestCustomer.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		88950224235458610023DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8895022D235458CD0023DA73 /* Main List Customer */,
+				88950225235458780023DA73 /* CustomerDetailCell.swift */,
+				88950226235458780023DA73 /* CustomerDetailCell.xib */,
+				88950229235458A70023DA73 /* CustomerInforTableViewCell.swift */,
+				8895022A235458A70023DA73 /* CustomerInforTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8895022D235458CD0023DA73 /* Main List Customer */ = {
+			isa = PBXGroup;
+			children = (
+				8895022E235458DB0023DA73 /* ListCustomer.storyboard */,
+			);
+			path = "Main List Customer";
+			sourceTree = "<group>";
+		};
+		88950230235458FE0023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8895024523545A870023DA73 /* Add */,
+				8895023C235459C10023DA73 /* Edit */,
+				88950231235459130023DA73 /* Info */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88950231235459130023DA73 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				88950232235459200023DA73 /* CustomerDetailController.swift */,
+				88950234235459360023DA73 /* InfoCustomerController.swift */,
+				889502362354594C0023DA73 /* InfoContactCustomerController.swift */,
+				88950238235459670023DA73 /* AddContactCustomerController.swift */,
+				8895023A2354598B0023DA73 /* InfoCustomerController.storyboard */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		8895023C235459C10023DA73 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				8895023D235459D20023DA73 /* EditCustomerController.swift */,
+				8895023F235459FC0023DA73 /* EditContactLHCController.swift */,
+				8895024123545A1A0023DA73 /* AddContactLHCController.swift */,
+				8895024323545A3E0023DA73 /* EditCustomerController.storyboard */,
+			);
+			path = Edit;
+			sourceTree = "<group>";
+		};
+		8895024523545A870023DA73 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				8895024623545A950023DA73 /* AddCustomerController.swift */,
+				8895024823545AAD0023DA73 /* AddContactController.swift */,
+				8895024A23545ACA0023DA73 /* AddCustomerController.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		8895024C23545B060023DA73 /* Sell */ = {
+			isa = PBXGroup;
+			children = (
+				8895026023545C0D0023DA73 /* Controller */,
+				8895025B23545BDC0023DA73 /* Model */,
+				8895025423545B860023DA73 /* View */,
+				8895024F23545B3A0023DA73 /* Main */,
+				8895024D23545B180023DA73 /* SellHomeViewController.swift */,
+			);
+			path = Sell;
+			sourceTree = "<group>";
+		};
+		8895024F23545B3A0023DA73 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8895025223545B710023DA73 /* SellMain.storyboard */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		8895025423545B860023DA73 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8895025723545BB00023DA73 /* OderTableViewCell.swift */,
+				8895025823545BB00023DA73 /* OderTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8895025B23545BDC0023DA73 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8895025C23545BE90023DA73 /* ListOrderModel.swift */,
+				8895025E23545BFC0023DA73 /* InfoOrderModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8895026023545C0D0023DA73 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8895027823545D440023DA73 /* Info */,
+				8895027323545D030023DA73 /* Add */,
+				8895026823545C690023DA73 /* Edit */,
+				8895026323545C2D0023DA73 /* Filter */,
+				8895026123545C170023DA73 /* ListOrderController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8895026323545C2D0023DA73 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				8895026423545C390023DA73 /* FilterOrderController.swift */,
+				8895026623545C510023DA73 /* FilterOrderController.storyboard */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		8895026823545C690023DA73 /* Edit */ = {
+			isa = PBXGroup;
+			children = (
+				8895026B23545C960023DA73 /* EditListProductOrderController.swift */,
+				8895026D23545CAA0023DA73 /* EditProductOrderController.swift */,
+				8895026F23545CCB0023DA73 /* EditOrderController.swift */,
+				8895027123545CED0023DA73 /* EditOrderController.storyboard */,
+			);
+			name = Edit;
+			sourceTree = "<group>";
+		};
+		8895027323545D030023DA73 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				8895027423545D100023DA73 /* AddOrderController.swift */,
+				8895027623545D2E0023DA73 /* AddOrderController.storyboard */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		8895027823545D440023DA73 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				8895027923545D520023DA73 /* InfoOrderContentController.swift */,
+				8895027B23545D680023DA73 /* InfoOrderController.swift */,
+				8895027D23545D7F0023DA73 /* InfoProductOrderController.swift */,
+				8895027F23545D960023DA73 /* InfoOrderController.storyboard */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		D9A3C2C23968EE21BD31A2D8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83798186AC73B6FFC13DA603 /* Pods-AZ CRM.debug.xcconfig */,
+				5F02EC597F21A4C21B306A8E /* Pods-AZ CRM.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		EF6A982A6D3DEACF17EF4D73 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DCF1E4859173CBEFB8248026 /* Pods_AZ_CRM.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +1268,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 887F8513235424230040D25B /* Build configuration list for PBXNativeTarget "AZ CRM" */;
 			buildPhases = (
+				95726CFCCBC14EFC925381F7 /* [CP] Check Pods Manifest.lock */,
 				887F84FA235424120040D25B /* Sources */,
 				887F84FB235424120040D25B /* Frameworks */,
 				887F84FC235424120040D25B /* Resources */,
+				4C50A9742857D5BE4BDE24C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +1295,11 @@
 				TargetAttributes = {
 					887F84FD235424120040D25B = {
 						CreatedOnToolsVersion = 10.3;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -125,22 +1326,264 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88950142235432CA0023DA73 /* ScheduleMain.storyboard in Resources */,
+				8895027723545D2E0023DA73 /* AddOrderController.storyboard in Resources */,
+				8895019A235437060023DA73 /* EditTaskController.storyboard in Resources */,
+				8895016C235435060023DA73 /* InfoStaffTaskCell.xib in Resources */,
+				889501A42354378B0023DA73 /* FilterTaskController.storyboard in Resources */,
+				8895022F235458DB0023DA73 /* ListCustomer.storyboard in Resources */,
+				8895020B235457130023DA73 /* EditOpportController.storyboard in Resources */,
+				889501AA235450680023DA73 /* CustomerMain.storyboard in Resources */,
+				889501E12354549B0023DA73 /* TakeCareOportCell.xib in Resources */,
+				8895023B2354598B0023DA73 /* InfoCustomerController.storyboard in Resources */,
+				889501E8235455070023DA73 /* ListOpport.storyboard in Resources */,
 				887F850F235424230040D25B /* LaunchScreen.storyboard in Resources */,
+				8895009F2354270A0023DA73 /* GoogleService-Info.plist in Resources */,
+				889501D5235453F70023DA73 /* OpportTableViewCell.xib in Resources */,
+				88950168235434DE0023DA73 /* ListTaskCell.xib in Resources */,
+				8895025A23545BB00023DA73 /* OderTableViewCell.xib in Resources */,
+				88950132235431E30023DA73 /* CustomTableViewCell.xib in Resources */,
+				8895025323545B710023DA73 /* SellMain.storyboard in Resources */,
+				889501702354352D0023DA73 /* FollowWorkCell.xib in Resources */,
+				889501A0235437510023DA73 /* ProcessTaskController.storyboard in Resources */,
+				8895028023545D960023DA73 /* InfoOrderController.storyboard in Resources */,
+				8895018C235436440023DA73 /* InfoTaskController.storyboard in Resources */,
+				8895014D2354336C0023DA73 /* ListScheduleCell.xib in Resources */,
+				88950156235433CE0023DA73 /* InfoScheduleController.storyboard in Resources */,
+				889501DD235454690023DA73 /* ProductTableViewCell.xib in Resources */,
 				887F850C235424230040D25B /* Assets.xcassets in Resources */,
+				88950202235456A50023DA73 /* AddOpportController.storyboard in Resources */,
 				887F8507235424120040D25B /* Main.storyboard in Resources */,
+				889501C1235452B40023DA73 /* ContactListTableViewCell.xib in Resources */,
+				88950214235457850023DA73 /* InfoOpportCustomerController.storyboard in Resources */,
+				8895015A2354340B0023DA73 /* EditScheduleController.storyboard in Resources */,
+				8895022C235458A70023DA73 /* CustomerInforTableViewCell.xib in Resources */,
+				889501922354369D0023DA73 /* AddTaskController.storyboard in Resources */,
+				889500D223542CE40023DA73 /* alarm.mp3 in Resources */,
+				889501F92354561E0023DA73 /* OpportProcessCustomerController.storyboard in Resources */,
+				8895024B23545ACA0023DA73 /* AddCustomerController.storyboard in Resources */,
+				88950228235458780023DA73 /* CustomerDetailCell.xib in Resources */,
+				889501D9235454380023DA73 /* OportProcessCell.xib in Resources */,
+				8895026723545C510023DA73 /* FilterOrderController.storyboard in Resources */,
+				889501602354346E0023DA73 /* AddScheduleController.storyboard in Resources */,
+				889501362354320F0023DA73 /* StaffTableViewCell.xib in Resources */,
+				8895027223545CED0023DA73 /* EditOrderController.storyboard in Resources */,
+				889501C4235452E20023DA73 /* ListContact.storyboard in Resources */,
+				8895024423545A3E0023DA73 /* EditCustomerController.storyboard in Resources */,
+				889501E5235454C20023DA73 /* TakeCareOpportProductCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C50A9742857D5BE4BDE24C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AZ CRM/Pods-AZ CRM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AZ CRM/Pods-AZ CRM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AZ CRM/Pods-AZ CRM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95726CFCCBC14EFC925381F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AZ CRM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		887F84FA235424120040D25B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				889500CD23542BF50023DA73 /* SwiftyInnerShadowLayer.swift in Sources */,
+				889501DC235454690023DA73 /* ProductTableViewCell.swift in Sources */,
+				889500F823542E090023DA73 /* SwipeAnimator.swift in Sources */,
+				8895014C2354336C0023DA73 /* ListScheduleCell.swift in Sources */,
+				889500E723542D840023DA73 /* SJContentView.swift in Sources */,
+				889500E423542D690023DA73 /* UITextField+fixCaretPosition.swift in Sources */,
+				8895023E235459D20023DA73 /* EditCustomerController.swift in Sources */,
+				889500EF23542DC30023DA73 /* SJSegmentView.swift in Sources */,
+				8895016B235435060023DA73 /* InfoStaffTaskCell.swift in Sources */,
+				889500C523542AAE0023DA73 /* UIAlertController+Extensions.swift in Sources */,
+				8895011423542EFB0023DA73 /* SwipeAction.swift in Sources */,
+				8895012023542F570023DA73 /* Extensions.swift in Sources */,
+				88950207235456E60023DA73 /* ListEditProductOpportController.swift in Sources */,
+				889500B1235429FE0023DA73 /* SearchHistoryManager.swift in Sources */,
+				889502232354584F0023DA73 /* RequestCustomer.swift in Sources */,
+				88950233235459200023DA73 /* CustomerDetailController.swift in Sources */,
+				889500DB23542D1B0023DA73 /* Scheduler.swift in Sources */,
+				8895020E2354573D0023DA73 /* TakeCareOportController.swift in Sources */,
+				889501E02354549B0023DA73 /* TakeCareOportCell.swift in Sources */,
+				8895012C23542FCD0023DA73 /* LogFile.swift in Sources */,
+				88950240235459FC0023DA73 /* EditContactLHCController.swift in Sources */,
+				8895015E235434520023DA73 /* AddSchedulesController.swift in Sources */,
+				889500CF23542C180023DA73 /* SwiftyInnerShadowView.swift in Sources */,
 				887F850A235424120040D25B /* AZ_CRM.xcdatamodeld in Sources */,
-				887F8504235424120040D25B /* ViewController.swift in Sources */,
+				88950198235436F10023DA73 /* EditTaskController.swift in Sources */,
+				8895010623542E7F0023DA73 /* SwipeCollectionViewCell.swift in Sources */,
+				889501B5235451040023DA73 /* ListInfoContactController.swift in Sources */,
+				889500F123542DD30023DA73 /* SJShadow.swift in Sources */,
+				8895012623542F9B0023DA73 /* CheckPerform.swift in Sources */,
+				88950235235459360023DA73 /* InfoCustomerController.swift in Sources */,
+				8895011E23542F490023DA73 /* SwipeFeedback.swift in Sources */,
+				8895011623542F0B0023DA73 /* SwipeActionButton.swift in Sources */,
+				889501CA235453870023DA73 /* OpportModel.swift in Sources */,
+				889501CC2354539D0023DA73 /* OportProcessModel.swift in Sources */,
+				8895012E23542FDC0023DA73 /* SendNotification.swift in Sources */,
+				8895010023542E450023DA73 /* SwipeTableViewCell+Accessibility.swift in Sources */,
+				8895012423542F8D0023DA73 /* Config.swift in Sources */,
+				8895013F235432A50023DA73 /* ScheduleHomeController.swift in Sources */,
+				88950196235436D40023DA73 /* EditListStaffController.swift in Sources */,
+				88950194235436BD0023DA73 /* EditStaffTaskController.swift in Sources */,
+				889500E923542D930023DA73 /* SJSegmentedScrollView.swift in Sources */,
+				889500B623542A250023DA73 /* Location.swift in Sources */,
+				88950239235459670023DA73 /* AddContactCustomerController.swift in Sources */,
+				889501D4235453F70023DA73 /* OpportTableViewCell.swift in Sources */,
+				889500AF235429E60023DA73 /* AlertRequestApi.swift in Sources */,
+				88950131235431E30023DA73 /* CustomTableViewCell.swift in Sources */,
+				889500AC235429B90023DA73 /* TextViewerViewController.swift in Sources */,
+				8895012823542FA80023DA73 /* RequestGroups.swift in Sources */,
+				889502122354576C0023DA73 /* TakeCareOpportProductDetailController.swift in Sources */,
+				88950205235456C80023DA73 /* EditOpportController.swift in Sources */,
+				8895026E23545CAA0023DA73 /* EditProductOrderController.swift in Sources */,
+				889500F323542DE00023DA73 /* SJUtil.swift in Sources */,
+				889501AD235450A80023DA73 /* ContactViewController.swift in Sources */,
+				889501882354361D0023DA73 /* InfoTaskController.swift in Sources */,
+				8895013C2354326F0023DA73 /* AZCRMViewController.swift in Sources */,
+				889501C7235453600023DA73 /* OpportunityViewController.swift in Sources */,
+				889501EB235455320023DA73 /* RequestOportProcess.swift in Sources */,
+				889501F7235455FC0023DA73 /* AddSchedulesOpportController.swift in Sources */,
+				8895021C235457FE0023DA73 /* Customer.swift in Sources */,
+				8895026523545C390023DA73 /* FilterOrderController.swift in Sources */,
+				889501CE235453B50023DA73 /* DelegateDataProduct.swift in Sources */,
+				8895010E23542EC10023DA73 /* SwipeTransitionLayout.swift in Sources */,
+				8895011C23542F390023DA73 /* SwipeExpanding.swift in Sources */,
+				8895010223542E5E0023DA73 /* SwipeTableViewCell+Display.swift in Sources */,
+				8895017C235435A70023DA73 /* InfoTaskModel.swift in Sources */,
+				8895015C235434150023DA73 /* EditSchedulesController.swift in Sources */,
+				889501EF2354555E0023DA73 /* RequestOport.swift in Sources */,
+				8895019C235437260023DA73 /* AddProcessTaskController.swift in Sources */,
+				88950217235457C30023DA73 /* ListCustomerViewController.swift in Sources */,
+				88950221235458360023DA73 /* RequestInfoCustomer.swift in Sources */,
+				889501B0235450D20023DA73 /* RequetsContact.swift in Sources */,
+				889500D723542D000023DA73 /* AlarmItem.swift in Sources */,
+				889501F5235455E30023DA73 /* HandingViewController.swift in Sources */,
+				8895027C23545D680023DA73 /* InfoOrderController.swift in Sources */,
+				8895024923545AAD0023DA73 /* AddContactController.swift in Sources */,
+				889502372354594C0023DA73 /* InfoContactCustomerController.swift in Sources */,
+				889500D523542CF30023DA73 /* AlarmSchedulerDelegate.swift in Sources */,
+				8895026223545C170023DA73 /* ListOrderController.swift in Sources */,
+				8895012A23542FBD0023DA73 /* GroupsApiModel.swift in Sources */,
+				889501502354339A0023DA73 /* ListScheduleModel.swift in Sources */,
+				8895018E235436700023DA73 /* AddStaffTaskController.swift in Sources */,
+				889500A8235429890023DA73 /* AlertRequestApiController.swift in Sources */,
+				88950227235458780023DA73 /* CustomerDetailCell.swift in Sources */,
+				8895012223542F660023DA73 /* Shared.swift in Sources */,
+				8895025D23545BE90023DA73 /* ListOrderModel.swift in Sources */,
+				889500ED23542DB30023DA73 /* SJSegmentTab.swift in Sources */,
+				889501732354355E0023DA73 /* TaskRequest.swift in Sources */,
+				8895027023545CCB0023DA73 /* EditOrderController.swift in Sources */,
+				889501FC235456410023DA73 /* AddOportController.swift in Sources */,
+				889501A72354503B0023DA73 /* CustomerViewController.swift in Sources */,
+				889500FA23542E160023DA73 /* SwipeAccessibilityCustomAction.swift in Sources */,
+				8895017A235435970023DA73 /* ListTaskModel.swift in Sources */,
+				889501B8235452400023DA73 /* InfoContactController.swift in Sources */,
+				889500C323542A9F0023DA73 /* Common+Extensions.swift in Sources */,
+				8895027E23545D7F0023DA73 /* InfoProductOrderController.swift in Sources */,
+				8895027523545D100023DA73 /* AddOrderController.swift in Sources */,
+				889500BB23542A500023DA73 /* AlertTableViewCell.swift in Sources */,
+				8895018A235436310023DA73 /* InfoTaskContentController.swift in Sources */,
+				8895019E2354373C0023DA73 /* FllowWorkController.swift in Sources */,
+				8895010C23542EB20023DA73 /* SwipeCollectionViewCellDelegate.swift in Sources */,
+				889501C0235452B40023DA73 /* ContactListTableViewCell.swift in Sources */,
+				8895021A235457E90023DA73 /* InforCustomerModel.swift in Sources */,
+				88950186235436060023DA73 /* InfoStaffTaskController.swift in Sources */,
+				88950138235432490023DA73 /* BaseViewController.swift in Sources */,
+				8895021E235458110023DA73 /* ContactCustomer.swift in Sources */,
+				8895010A23542EA20023DA73 /* SwipeCollectionViewCell+Display.swift in Sources */,
+				889500BF23542A820023DA73 /* UItextFieldExtension.swift in Sources */,
+				8895016F2354352D0023DA73 /* FollowWorkCell.swift in Sources */,
+				889500EB23542DA30023DA73 /* SJSegmentedViewController.swift in Sources */,
+				88950209235456FB0023DA73 /* EditProductOpportController.swift in Sources */,
+				889501BA235452650023DA73 /* EditContactController.swift in Sources */,
+				8895011023542ED00023DA73 /* SwipeOptions.swift in Sources */,
+				8895010823542E900023DA73 /* SwipeCollectionViewCell+Accessibility.swift in Sources */,
+				8895013A2354325C0023DA73 /* LoginScreenViewController.swift in Sources */,
+				8895024723545A950023DA73 /* AddCustomerController.swift in Sources */,
+				8895025F23545BFC0023DA73 /* InfoOrderModel.swift in Sources */,
+				8895024E23545B180023DA73 /* SellHomeViewController.swift in Sources */,
+				889501D8235454380023DA73 /* OportProcessCell.swift in Sources */,
+				88950158235433EB0023DA73 /* InfoScheduleController.swift in Sources */,
+				889501FE2354565B0023DA73 /* AddProductController.swift in Sources */,
+				8895011A23542F280023DA73 /* SwipeExpansionStyle.swift in Sources */,
+				8895025923545BB00023DA73 /* OderTableViewCell.swift in Sources */,
+				88950163235434B00023DA73 /* ListTaskController.swift in Sources */,
+				889501D0235453CD0023DA73 /* TakeCareOpportModel.swift in Sources */,
+				8895017E235435B80023DA73 /* FollowWorkModel.swift in Sources */,
+				88950145235433260023DA73 /* ListScheduleController.swift in Sources */,
+				889500AA2354299F0023DA73 /* AttributedTextBlock.swift in Sources */,
+				889500B423542A180023DA73 /* AlertRequestApiInfo.swift in Sources */,
+				889501A2235437720023DA73 /* FilterTaskController.swift in Sources */,
+				889501BC235452850023DA73 /* AddContactControllerLH.swift in Sources */,
+				889501752354356D0023DA73 /* InfoTaskRequest.swift in Sources */,
+				889501E4235454C20023DA73 /* TakeCareOpportProductCell.swift in Sources */,
+				889500FC23542E240023DA73 /* SwipeController.swift in Sources */,
+				8895027A23545D520023DA73 /* InfoOrderContentController.swift in Sources */,
+				889500C123542A910023DA73 /* DatePickerViewController.swift in Sources */,
+				889500CA23542BD90023DA73 /* Reach.swift in Sources */,
+				889500D923542D0D0023DA73 /* AlarmList.swift in Sources */,
+				8895010423542E6E0023DA73 /* SwipeTableViewCellDelegate.swift in Sources */,
+				889500F623542DFB0023DA73 /* Swipeable.swift in Sources */,
+				8895026C23545C960023DA73 /* EditListProductOrderController.swift in Sources */,
+				8895011823542F190023DA73 /* SwipeActionTransitioning.swift in Sources */,
+				88950177235435810023DA73 /* FollowWorkRequest.swift in Sources */,
+				889500DD23542D280023DA73 /* Alarm.swift in Sources */,
+				889500B823542A330023DA73 /* Address.swift in Sources */,
+				88950148235433460023DA73 /* ScheduleRequest.swift in Sources */,
+				889500FE23542E340023DA73 /* SwipeTableCell.swift in Sources */,
+				889500E223542D5A0023DA73 /* SkyFloatingLabelTextFieldWithIcon.swift in Sources */,
+				889501352354320F0023DA73 /* StaffTableViewCell.swift in Sources */,
+				889501B3235450F30023DA73 /* ContactModel.swift in Sources */,
+				889500BD23542A5C0023DA73 /* Button.swift in Sources */,
+				889500E023542D420023DA73 /* SkyFloatingLabelTextField.swift in Sources */,
+				88950167235434DE0023DA73 /* ListTaskCell.swift in Sources */,
+				8895011223542EE40023DA73 /* SwipeActionsView.swift in Sources */,
+				889501F3235455CE0023DA73 /* OpportProcessController.swift in Sources */,
+				88950210235457550023DA73 /* TakeCareOpportDetailController.swift in Sources */,
+				889501ED235455440023DA73 /* RequestTakeCareOpport.swift in Sources */,
+				8895022B235458A70023DA73 /* CustomerInforTableViewCell.swift in Sources */,
+				889500C723542ABD0023DA73 /* UIView.swift in Sources */,
+				8895024223545A1A0023DA73 /* AddContactLHCController.swift in Sources */,
 				887F8502235424120040D25B /* AppDelegate.swift in Sources */,
+				88950190235436820023DA73 /* AddTaskController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,16 +1727,19 @@
 		};
 		887F8514235424230040D25B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83798186AC73B6FFC13DA603 /* Pods-AZ CRM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AZ CRM/AZ CRM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6K5R838AQ;
 				INFOPLIST_FILE = "AZ CRM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DH.AZCRM.AZ-CRM";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DH.AZCRM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,16 +1748,19 @@
 		};
 		887F8515235424230040D25B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F02EC597F21A4C21B306A8E /* Pods-AZ CRM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "AZ CRM/AZ CRM.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = V6K5R838AQ;
 				INFOPLIST_FILE = "AZ CRM/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.DH.AZCRM.AZ-CRM";
+				PRODUCT_BUNDLE_IDENTIFIER = com.DH.AZCRM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

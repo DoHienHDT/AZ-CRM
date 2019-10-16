@@ -107,7 +107,7 @@ class EditSchedulesController: BaseViewController {
             self.macv = info!.tasks[0]
         }
         
-        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
         alert.view.addConstraint(heightAlert)
         
         alert.addAction(title: "Cancel", style: .cancel)
@@ -137,6 +137,7 @@ class EditSchedulesController: BaseViewController {
     }
     
     @IBAction func makhAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
         let alert = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         
         alert.addAlertAZSoft(Api: .customers) { [unowned self] (info) in
@@ -144,7 +145,7 @@ class EditSchedulesController: BaseViewController {
             self.makh = Int(info!.customer[0])
         }
         
-        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
+        let heightAlert:NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: self.view.frame.height * 0.80)
         alert.view.addConstraint(heightAlert)
         
         alert.addAction(title: "Cancel", style: .cancel)
@@ -152,11 +153,12 @@ class EditSchedulesController: BaseViewController {
     }
     
     @IBAction func manvhtsAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
          self.showAsAlertController(style: .actionSheet, title: "Select Player", action: "Done", height: nil)
     }
     
     @IBAction func ngaybdAlertButton(_ sender: UIButton) {
-        
+        view.endEditing(true)
         let dateAdd = Calendar.current.date(byAdding: .minute, value: 5, to: Date())
         
         let dateFormat = DateFormatter()
@@ -187,11 +189,12 @@ class EditSchedulesController: BaseViewController {
     }
     
     @IBAction func nhactrcAlertButton(_ sender: UIButton) {
+        view.endEditing(true)
         self.showAsFormsheet()
     }
     
     @IBAction func ngayktAlertButton(_ sender: UIButton) {
-        
+        view.endEditing(true)
         let today = Date()
         let dateFormat = DateFormatter()
         dateFormat.dateFormat = "dd/MM/yyyy HH:mm"
@@ -517,6 +520,7 @@ extension EditSchedulesController {
                         if let valueString =  response.result.value as? [String: Any]  {
                             if let message = valueString["msg"] as? String {
                                 if message == "ok" {
+                                    print("hello")
                                     Alarm.alarm.stopAlarm()
                                     SVProgressHUD.showSuccess(withStatus: "Thành công")
                                     SVProgressHUD.dismiss(withDelay: 1, completion: {

@@ -1,7 +1,143 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SeA-wy-sOc">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--List Customer View Controller-->
+        <scene sceneID="eKt-oX-2LI">
+            <objects>
+                <viewController id="SeA-wy-sOc" customClass="ListCustomerViewController" customModule="AZ_CRM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="U0k-oU-GI7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="gGe-2Q-gsR">
+                                <rect key="frame" x="0.0" y="75" width="320" height="56"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="SeA-wy-sOc" id="pS6-Yh-5ug"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YvH-ND-omn">
+                                <rect key="frame" x="0.0" y="131" width="320" height="437"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SeA-wy-sOc" id="Bpa-U9-lg4"/>
+                                    <outlet property="delegate" destination="SeA-wy-sOc" id="wiH-Sp-wuN"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6pt-dv-90G">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Khách Hàng" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJ2-Yz-SRD">
+                                        <rect key="frame" x="104" y="30" width="112" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DAh-TV-gp2">
+                                        <rect key="frame" x="0.0" y="20" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="DAh-TV-gp2" secondAttribute="height" multiplier="1:1" id="2wp-F5-aJb"/>
+                                        </constraints>
+                                        <state key="normal" image="left-arrow"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="SeA-wy-sOc" eventType="touchUpInside" id="RAP-L4-UhQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="19D-uw-tsG">
+                                        <rect key="frame" x="270" y="20" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="19D-uw-tsG" secondAttribute="height" multiplier="1:1" id="5A8-qA-exv"/>
+                                        </constraints>
+                                        <state key="normal" image="add"/>
+                                        <connections>
+                                            <action selector="addCustomer:" destination="SeA-wy-sOc" eventType="touchUpInside" id="hCB-jA-3f0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="19D-uw-tsG" secondAttribute="trailing" id="7rT-vO-0xL"/>
+                                    <constraint firstAttribute="bottom" secondItem="DAh-TV-gp2" secondAttribute="bottom" id="9Sa-Pe-fuI"/>
+                                    <constraint firstItem="BJ2-Yz-SRD" firstAttribute="centerX" secondItem="6pt-dv-90G" secondAttribute="centerX" id="NOG-KH-ete"/>
+                                    <constraint firstItem="DAh-TV-gp2" firstAttribute="leading" secondItem="6pt-dv-90G" secondAttribute="leading" id="PCg-0A-g10"/>
+                                    <constraint firstItem="19D-uw-tsG" firstAttribute="top" secondItem="6pt-dv-90G" secondAttribute="top" constant="20" id="bjq-cx-4ub"/>
+                                    <constraint firstItem="BJ2-Yz-SRD" firstAttribute="top" secondItem="6pt-dv-90G" secondAttribute="top" constant="30" id="hZU-by-Jzy"/>
+                                    <constraint firstAttribute="height" constant="70" id="hdU-rM-LT8"/>
+                                    <constraint firstAttribute="bottom" secondItem="19D-uw-tsG" secondAttribute="bottom" id="nJv-Bc-hfM"/>
+                                    <constraint firstItem="DAh-TV-gp2" firstAttribute="top" secondItem="6pt-dv-90G" secondAttribute="top" constant="20" id="yQC-lD-SzF"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6pt-dv-90G" firstAttribute="leading" secondItem="wf4-96-NEH" secondAttribute="leading" id="INb-Lh-g88"/>
+                            <constraint firstItem="gGe-2Q-gsR" firstAttribute="top" secondItem="6pt-dv-90G" secondAttribute="bottom" constant="5" id="Ins-Le-LQD"/>
+                            <constraint firstItem="gGe-2Q-gsR" firstAttribute="trailing" secondItem="wf4-96-NEH" secondAttribute="trailing" id="V7m-tH-pkC"/>
+                            <constraint firstItem="6pt-dv-90G" firstAttribute="top" secondItem="U0k-oU-GI7" secondAttribute="top" id="Wgu-b3-yuV"/>
+                            <constraint firstItem="YvH-ND-omn" firstAttribute="leading" secondItem="wf4-96-NEH" secondAttribute="leading" id="enq-8D-xNT"/>
+                            <constraint firstItem="6pt-dv-90G" firstAttribute="trailing" secondItem="wf4-96-NEH" secondAttribute="trailing" id="f10-aU-a3i"/>
+                            <constraint firstItem="YvH-ND-omn" firstAttribute="top" secondItem="gGe-2Q-gsR" secondAttribute="bottom" id="hEj-Rl-yw9"/>
+                            <constraint firstItem="wf4-96-NEH" firstAttribute="trailing" secondItem="YvH-ND-omn" secondAttribute="trailing" id="lPW-27-6pJ"/>
+                            <constraint firstItem="wf4-96-NEH" firstAttribute="bottom" secondItem="YvH-ND-omn" secondAttribute="bottom" id="nXa-a6-AIQ"/>
+                            <constraint firstItem="gGe-2Q-gsR" firstAttribute="leading" secondItem="wf4-96-NEH" secondAttribute="leading" id="zXK-DM-OPD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wf4-96-NEH"/>
+                    </view>
+                    <connections>
+                        <outlet property="heightNavigationView" destination="hdU-rM-LT8" id="b22-EK-IUT"/>
+                        <outlet property="heightTitle" destination="hZU-by-Jzy" id="HSL-90-tVv"/>
+                        <outlet property="listCustomerView" destination="6pt-dv-90G" id="fpu-VP-zbn"/>
+                        <outlet property="searchBar" destination="gGe-2Q-gsR" id="Fmb-Aq-NTV"/>
+                        <outlet property="tableView" destination="YvH-ND-omn" id="lGQ-2X-NuL"/>
+                        <outlet property="topButton" destination="yQC-lD-SzF" id="DPX-wf-JBW"/>
+                        <outlet property="topButtonRight" destination="bjq-cx-4ub" id="UVl-C7-VDX"/>
+                        <segue destination="YKV-nW-GcI" kind="presentation" id="5Pa-PZ-mfd"/>
+                        <segue destination="esO-PJ-zQx" kind="show" id="5pc-lJ-dAZ"/>
+                        <segue destination="Imx-xy-n0U" kind="show" id="hqh-X4-rfC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sq1-WU-gsn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1858.125" y="3858.8028169014083"/>
+        </scene>
+        <!--InfoCustomerController-->
+        <scene sceneID="sGK-Nq-a4p">
+            <objects>
+                <viewControllerPlaceholder storyboardName="InfoCustomerController" id="Imx-xy-n0U" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YRY-qh-zkh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2471" y="4465"/>
+        </scene>
+        <!--AddCustomerController-->
+        <scene sceneID="93v-8a-5fB">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddCustomerController" id="YKV-nW-GcI" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EYh-bE-cC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1857" y="4466"/>
+        </scene>
+        <!--EditCustomerController-->
+        <scene sceneID="wtn-mw-lic">
+            <objects>
+                <viewControllerPlaceholder storyboardName="EditCustomerController" id="esO-PJ-zQx" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIx-Te-orc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1380" y="4465"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="add" width="21.333333969116211" height="21.333333969116211"/>
+        <image name="left-arrow" width="21.333333969116211" height="21.333333969116211"/>
+    </resources>
 </document>

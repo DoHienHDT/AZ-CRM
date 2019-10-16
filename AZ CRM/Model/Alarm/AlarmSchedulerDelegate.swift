@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol AlarmSchedulerDelegate {
+    func setNotificationWithDate(_ item: AlarmItem)
+    func removeNotification(_ item: AlarmItem)
+    func scheduleReminder(forItem item: AlarmItem)
+    func correctDate(_ date: Date) -> Date
+}
