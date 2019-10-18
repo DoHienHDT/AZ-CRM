@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lSY-Il-x8m">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lSY-Il-x8m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,77 +11,70 @@
         <!--Add Contact Controller-->
         <scene sceneID="aVL-gR-uBT">
             <objects>
-                <viewController storyboardIdentifier="AddContactController" id="bsA-jT-9WE" customClass="AddContactController" customModule="AZSoft_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddContactController" id="bsA-jT-9WE" customClass="AddContactController" customModule="AZ_CRM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eLa-Yk-9Mt">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1100"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1046"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WXM-p9-uBP">
-                                <rect key="frame" x="0.0" y="80" width="320" height="986"/>
+                                <rect key="frame" x="0.0" y="80" width="320" height="932"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qi1-IO-f9b">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1676"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1584.5"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kqa-L2-HRd">
-                                                <rect key="frame" x="0.0" y="10" width="320" height="1666"/>
+                                                <rect key="frame" x="0.0" y="10" width="320" height="1574.5"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1I-pb-P98" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="40" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y1I-pb-P98" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="40" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mã Khách hàng"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAB-Zk-gCJ" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="110" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pAB-Zk-gCJ" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="114" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Họ tên"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-bY-vLS" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="180" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GL7-bY-vLS" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="188" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Chức vụ"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goY-nf-B4C" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="250" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="goY-nf-B4C" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="262" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Email"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-OR-qMh" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="320" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-OR-qMh" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="336" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Di động"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePk-IQ-Saf" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="390" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ePk-IQ-Saf" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="410" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Di động khác"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qk-un-HOM" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="460" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3qk-un-HOM" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="484" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                                                         <userDefinedRuntimeAttributes>
@@ -91,7 +82,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKx-GN-YDg">
-                                                        <rect key="frame" x="20" y="610" width="280" height="50"/>
+                                                        <rect key="frame" x="20" y="642" width="280" height="50"/>
                                                         <color key="backgroundColor" red="0.98372310399999996" green="0.1471265256" blue="0.003615581896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="nBg-Kj-VEe"/>
@@ -104,9 +95,8 @@
                                                             <action selector="addCustomerButton:" destination="bsA-jT-9WE" eventType="touchUpInside" id="lwP-C0-Dmu"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLb-gY-Vd8" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="530" width="300" height="30"/>
-                                                        <nil key="textColor"/>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLb-gY-Vd8" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
+                                                        <rect key="frame" x="10" y="558" width="300" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -233,7 +223,7 @@
         <!--Add Customer Controller-->
         <scene sceneID="6De-cL-QVD">
             <objects>
-                <viewController storyboardIdentifier="AddCustomerController" id="lSY-Il-x8m" customClass="AddCustomerController" customModule="AZSoft_IOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCustomerController" id="lSY-Il-x8m" customClass="AddCustomerController" customModule="AZ_CRM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pRf-P1-eWI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,21 +239,21 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-oN-ygP">
                                                         <rect key="frame" x="10" y="151" width="300" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.89327220689999998" green="0.90430025889999999" blue="0.90430025889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Vn8-Ev-y38"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1wq-oc-9Vj">
                                                         <rect key="frame" x="10" y="1074" width="300" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.89327220689999998" green="0.90430025889999999" blue="0.90430025889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="qaq-dk-Lyt"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dwt-7M-vJV">
                                                         <rect key="frame" x="10" y="1145" width="300" height="1"/>
-                                                        <color key="backgroundColor" red="0.78312555959999997" green="0.78312555959999997" blue="0.78312555959999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" red="0.89327220689999998" green="0.90430025889999999" blue="0.90430025889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="RSs-M3-w9k"/>
                                                         </constraints>
@@ -312,7 +302,7 @@
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5XT-kP-9ZX">
                                                         <rect key="frame" x="10" y="80" width="300" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.89327220689999998" green="0.90430025889999999" blue="0.90430025889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="11w-ek-seG"/>
                                                         </constraints>
@@ -355,7 +345,7 @@
                                                     </button>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAG-o4-YAc">
                                                         <rect key="frame" x="10" y="1307" width="300" height="1"/>
-                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="backgroundColor" red="0.89327220689999998" green="0.90430025889999999" blue="0.90430025889999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="Y2U-bv-pHy"/>
                                                         </constraints>
@@ -408,45 +398,40 @@
                                                             <action selector="canhanAlertButton:" destination="lSY-Il-x8m" eventType="touchUpInside" id="JSE-XW-TtG"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFR-YA-qrq" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zFR-YA-qrq" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="192" width="300" height="48.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Mã khách hàng"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufg-wy-w46" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufg-wy-w46" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="280.5" width="300" height="54"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Tên khách hàng"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Laa-RO-5VO" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Laa-RO-5VO" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="374.5" width="300" height="54"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Điện thoại"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QB2-d3-Jwg" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QB2-d3-Jwg" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="468.5" width="300" height="54.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Di động"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqw-Zs-Lb7" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rqw-Zs-Lb7" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="563" width="300" height="54"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -456,18 +441,16 @@
                                                             <action selector="validateEmailField" destination="lSY-Il-x8m" eventType="editingDidEnd" id="8rm-hE-c5j"/>
                                                         </connections>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-GP-5nA" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pTx-GP-5nA" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="657" width="300" height="54.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Skype"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-t3-wc7" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WR5-t3-wc7" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="751.5" width="300" height="54"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -512,18 +495,16 @@
                                                             <action selector="ngaydkkdAlertButton:" destination="lSY-Il-x8m" eventType="touchUpInside" id="WtG-Np-Ngd"/>
                                                         </connections>
                                                     </button>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-7D-Fsj" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DQJ-7D-Fsj" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="940" width="300" height="54"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="placeholder" value="Ghi chú"/>
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-Eb-JCz" customClass="SkyFloatingLabelTextField" customModule="AZSoft_IOS" customModuleProvider="target">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cya-Eb-JCz" customClass="SkyFloatingLabelTextField" customModule="AZ_CRM" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="845.5" width="300" height="54.5"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <userDefinedRuntimeAttributes>
@@ -755,7 +736,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AtQ-Kh-guT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2609" y="5334"/>
+            <point key="canvasLocation" x="-2657" y="5237"/>
         </scene>
     </scenes>
     <resources>

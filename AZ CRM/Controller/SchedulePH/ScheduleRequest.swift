@@ -15,43 +15,46 @@ class ScheduleRequest  {
             dateformat.dateFormat = "dd/MM/yyyy"
             var fetchedOrder = [ListScheduleModel]()
             if schedule != nil {
-                
-                let arrayOfSchedule = schedule!["data"] as! [[String: Any]]
-                for valueSchedule in arrayOfSchedule {
-                    
-                    let malh = valueSchedule["malh"] as? Int
-                    let tieude = valueSchedule["tieude"] as? String
-                    let ngaybd = valueSchedule["ngaybd"] as? String
-                    let ngaykt = valueSchedule["ngaykt"] as? String
-                    let diadiem = valueSchedule["diadiem"] as? String
-                    let noidung = valueSchedule["noidung"] as? String
-                    let nhanvien = valueSchedule["nhanvien"] as? String
-                    
-                    var dateStringNT = String()
-                    
-                    if ngaybd != nil {
-                        //Convert timerInterver to date
-                        let valueNgaytao = ngaybd ?? ""
-                        let splistNT = valueNgaytao.components(separatedBy: "/Date(")
-                        let splistNT1 = splistNT[1]
-                        let splistNT2 = splistNT1.components(separatedBy: ")/")
-                        let dateNT = Date(milliseconds: Int(splistNT2[0]) ?? 0)
-                        dateStringNT = dateformat.string(from: dateNT)
+                if let msg = schedule?["msg"] as? String {
+                    if msg == "ok" {
+                        let arrayOfSchedule = schedule!["data"] as! [[String: Any]]
+                                for valueSchedule in arrayOfSchedule {
+                                        
+                                        let malh = valueSchedule["malh"] as? Int
+                                        let tieude = valueSchedule["tieude"] as? String
+                                        let ngaybd = valueSchedule["ngaybd"] as? String
+                                        let ngaykt = valueSchedule["ngaykt"] as? String
+                                        let diadiem = valueSchedule["diadiem"] as? String
+                                        let noidung = valueSchedule["noidung"] as? String
+                                        let nhanvien = valueSchedule["nhanvien"] as? String
+                                        
+                                        var dateStringNT = String()
+                                        
+                                        if ngaybd != nil {
+                                            //Convert timerInterver to date
+                                            let valueNgaytao = ngaybd ?? ""
+                                            let splistNT = valueNgaytao.components(separatedBy: "/Date(")
+                                            let splistNT1 = splistNT[1]
+                                            let splistNT2 = splistNT1.components(separatedBy: ")/")
+                                            let dateNT = Date(milliseconds: Int(splistNT2[0]) ?? 0)
+                                            dateStringNT = dateformat.string(from: dateNT)
+                                        }
+                                        
+                                        var dateStringNT1 = String()
+                                        if ngaykt != nil {
+                                            //Convert timerInterver to date
+                                            let valueNgaytao1 = ngaykt ?? ""
+                                            let splistNT3 = valueNgaytao1.components(separatedBy: "/Date(")
+                                            let splistNT4 = splistNT3[1]
+                                            let splistNT5 = splistNT4.components(separatedBy: ")/")
+                                            let dateNT1 = Date(milliseconds: Int(splistNT5[0]) ?? 0)
+                                            dateStringNT1 = dateformat.string(from: dateNT1)
+                                        }
+                                        
+                                        let api: ListScheduleModel = ListScheduleModel(malh: malh ?? 0, tieude: tieude ?? "", ngaybd: dateStringNT , ngaykt: dateStringNT1 , diadiem: diadiem ?? "", noidung: noidung ?? "", nhanvien: nhanvien ?? "")
+                                        fetchedOrder.append(api)
+                            }
                     }
-                    
-                    var dateStringNT1 = String()
-                    if ngaykt != nil {
-                        //Convert timerInterver to date
-                        let valueNgaytao1 = ngaykt ?? ""
-                        let splistNT3 = valueNgaytao1.components(separatedBy: "/Date(")
-                        let splistNT4 = splistNT3[1]
-                        let splistNT5 = splistNT4.components(separatedBy: ")/")
-                        let dateNT1 = Date(milliseconds: Int(splistNT5[0]) ?? 0)
-                        dateStringNT1 = dateformat.string(from: dateNT1)
-                    }
-                    
-                    let api: ListScheduleModel = ListScheduleModel(malh: malh ?? 0, tieude: tieude ?? "", ngaybd: dateStringNT , ngaykt: dateStringNT1 , diadiem: diadiem ?? "", noidung: noidung ?? "", nhanvien: nhanvien ?? "")
-                    fetchedOrder.append(api)
                 }
             } else {
                 print("api customers nil")

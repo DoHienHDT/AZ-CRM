@@ -47,7 +47,7 @@ class ListScheduleController: BaseViewController, UISearchBarDelegate {
         self.defaultOptions.transitionStyle = .reveal
         
         tableView.register(UINib(nibName: "ListScheduleCell", bundle: nil), forCellReuseIdentifier: "ListScheduleCell")
-    
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -127,13 +127,13 @@ extension ListScheduleController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ListScheduleCell", for: indexPath) as! ListScheduleCell
-            cell.ngayktLabel.text = searchTableView[indexPath.row].ngaykt
-            cell.ngaybdLabel.text = searchTableView[indexPath.row].ngaybd
-            cell.diadiemLabel.text = searchTableView[indexPath.row].diadiem
-            cell.tieudeLbael.text = searchTableView[indexPath.row].tieude
-            cell.manvLabel.text = searchTableView[indexPath.row].nhanvien
-            cell.noidungLabel.text = searchTableView[indexPath.row].noidung
-            cell.delegate = self
+        cell.ngayktLabel.text = searchTableView[indexPath.row].ngaykt
+        cell.ngaybdLabel.text = searchTableView[indexPath.row].ngaybd
+        cell.diadiemLabel.text = searchTableView[indexPath.row].diadiem
+        cell.tieudeLbael.text = searchTableView[indexPath.row].tieude
+        cell.manvLabel.text = searchTableView[indexPath.row].nhanvien
+        cell.noidungLabel.text = searchTableView[indexPath.row].noidung
+        cell.delegate = self
         return cell
     }
     
@@ -169,8 +169,11 @@ extension ListScheduleController: SwipeTableViewCellDelegate {
                 let openActionDelete = UIAlertAction(title: "Xoá", style: .destructive, handler: { (_) in
                     do {
                         if let urlRegister = try AppDelegate.context.fetch(CompanyCode.fetchRequest()) as? [CompanyCode] {
-                            let param: Parameters = ["method": "scheduedelete","malh": self.searchTableView[indexPath.row].malh , "seckey": urlRegister.last!.seckey!]
-                            self.deleteRows(paramer: param, indexPath: indexPath.row)
+                            if let entity = try AppDelegate.context.fetch(Entity.fetchRequest()) as? [Entity] {
+                                let param: Parameters = ["method": "scheduedelete","malh": self.searchTableView[indexPath.row].malh , "seckey": urlRegister.last!.seckey!]
+                                let paramAlarm: Parameters = ["method": "stopalarm","manv":entity.last!.manv!,"malh":self.searchTableView[indexPath.row].malh,"seckey":urlRegister.last!.seckey!]
+                                self.deleteRows(paramer: param, indexPath: indexPath.row, paramAlram: paramAlarm)
+                            }
                         }
                     } catch let error {
                         print(error.localizedDescription)
@@ -216,7 +219,36 @@ extension ListScheduleController: SwipeTableViewCellDelegate {
         }
     }
     
-    func deleteRows(paramer: Parameters!, indexPath: Int) {
+    func stopAlarm(param: Parameters!) {
+        do {
+            if let urlRegister = try AppDelegate.context.fetch(CompanyCode.fetchRequest()) as? [CompanyCode] {
+                Alamofire.request(urlRegister.last!.data!, method: .post, parameters: param, encoding: JSONEncoding.default).responseJSON { (response) in
+                    switch response.result {
+                    case .success(let value):
+                        
+                        if let valueString = response.result.value as? [String: Any] {
+                            if let message = valueString["msg"] as? String {
+                                if message == "ok" {
+                                    
+                                } else {
+                                    let alert = UIAlertController(title: "Messages", message: "\(value)", preferredStyle: .alert)
+                                    let openAction = UIAlertAction(title: "OK", style: .cancel)
+                                    alert.addAction(openAction)
+                                    self.present(alert, animated: true, completion: nil)
+                                }
+                            }
+                        }
+                    case .failure(_):
+                        print("failse")
+                    }
+                }
+            }
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func deleteRows(paramer: Parameters!, indexPath: Int, paramAlram: Parameters!) {
         do {
             if let urlRegister = try AppDelegate.context.fetch(CompanyCode.fetchRequest()) as? [CompanyCode] {
                 Alamofire.request(urlRegister.last!.data!, method: .post, parameters: paramer, encoding: JSONEncoding.default).responseJSON { (response) in
@@ -229,6 +261,7 @@ extension ListScheduleController: SwipeTableViewCellDelegate {
                                     SVProgressHUD.show()
                                     self.schedule.remove(at: indexPath)
                                     SVProgressHUD.dismiss(withDelay: 1, completion: {
+                                        self.stopAlarm(param: paramAlram)
                                         self.requestData()
                                     })
                                 } else {

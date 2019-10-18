@@ -5,7 +5,7 @@
 //  Created by vmio vmio on 10/14/19.
 //  Copyright © 2019 AZCRM. All rights reserved.
 //
-
+import UIKit
 import Alamofire
 
 class ListOrderModel {
@@ -35,27 +35,31 @@ class RequestListOerder  {
             dateformat.dateFormat = "dd/MM/yyyy"
             var fetchedOrder = [ListOrderModel]()
             if order != nil {
-                let arrayOfOrder = order!["data"] as! [[String: Any]]
-                for valueOrder in arrayOfOrder {
-                    
-                    let madh = valueOrder["madh"] as? Int
-                    let sodh = valueOrder["sodh"] as? String
-                    let ngaydh = valueOrder["ngaydh"] as? String
-                    let doituong = valueOrder["doituong"] as? String
-                    let diadiemgiaohang = valueOrder["diadiemgiaohang"] as? String
-                    let sotien = valueOrder["sotien"] as? Int
-                    let nhanvien = valueOrder["nhanvien"] as? String
-                    
-                    //Convert timerInterver to date
-                    let valueNgaytao = ngaydh ?? ""
-                    let splistNT = valueNgaytao.components(separatedBy: "/Date(")
-                    let splistNT1 = splistNT[1]
-                    let splistNT2 = splistNT1.components(separatedBy: ")/")
-                    let dateNT = Date(milliseconds: Int(splistNT2[0]) ?? 0)
-                    let dateStringNT = dateformat.string(from: dateNT)
-                    
-                    let api: ListOrderModel = ListOrderModel(madh: madh ?? 0, sodh: sodh ?? "", ngaydh: dateStringNT, doituong: doituong ?? "", diadiemgiaohang: diadiemgiaohang ?? "", sotien: sotien ?? 0, nhanvien: nhanvien ?? "")
-                    fetchedOrder.append(api)
+                if let msg =  order?["msg"] as? String {
+                    if msg == "ok" {
+                        let arrayOfOrder = order!["data"] as! [[String: Any]]
+                                      for valueOrder in arrayOfOrder {
+                                          
+                                          let madh = valueOrder["madh"] as? Int
+                                          let sodh = valueOrder["sodh"] as? String
+                                          let ngaydh = valueOrder["ngaydh"] as? String
+                                          let doituong = valueOrder["doituong"] as? String
+                                          let diadiemgiaohang = valueOrder["diadiemgiaohang"] as? String
+                                          let sotien = valueOrder["sotien"] as? Int
+                                          let nhanvien = valueOrder["nhanvien"] as? String
+                                          
+                                          //Convert timerInterver to date
+                                          let valueNgaytao = ngaydh ?? ""
+                                          let splistNT = valueNgaytao.components(separatedBy: "/Date(")
+                                          let splistNT1 = splistNT[1]
+                                          let splistNT2 = splistNT1.components(separatedBy: ")/")
+                                          let dateNT = Date(milliseconds: Int(splistNT2[0]) ?? 0)
+                                          let dateStringNT = dateformat.string(from: dateNT)
+                                          
+                                          let api: ListOrderModel = ListOrderModel(madh: madh ?? 0, sodh: sodh ?? "", ngaydh: dateStringNT, doituong: doituong ?? "", diadiemgiaohang: diadiemgiaohang ?? "", sotien: sotien ?? 0, nhanvien: nhanvien ?? "")
+                                          fetchedOrder.append(api)
+                                        }
+                            }
                 }
             } else {
                 print("api customers nil")

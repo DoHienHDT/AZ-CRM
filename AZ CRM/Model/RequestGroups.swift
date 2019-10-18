@@ -16,7 +16,6 @@ class RequestGroups {
             var fetchedContact = [Manhom]()
             
             let arrayManhom = value!["data"] as! [[String: Any]]
-         
           
             for contact in arrayManhom {
                 guard let manhom = contact["manhom"] as? Int else {return}

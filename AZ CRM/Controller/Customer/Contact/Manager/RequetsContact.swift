@@ -16,20 +16,23 @@ class RequestContacts {
             var fetchedCustomer = [ContactModel]()
             
             if contact != nil {
-                
-                let valueContact = contact!["data"] as! [[String: Any]]
-                
-                for value in valueContact {
-                    let valueMaso = value["maso"] as? String
-                    let valueName = value["hoten"] as? String
-                    let valueEmail = value["email"] as? String
-                    let valuePhone = value["didong"] as? String
-                    let valueMalh = value["malh"] as? Int
-                    let tenkh = value["tenkh"] as? String
-                    let makh = value["makh"] as? Int
-                    
-                    let textData: ContactModel = ContactModel(company: valueName ?? "", mail: valueEmail ?? "", phone: valuePhone ?? "", maso: valueMaso ?? "", malh: valueMalh ?? 0, tenkh: tenkh ?? "", makh: makh ?? 0)
-                    fetchedCustomer.append(textData)
+                if let msg = contact?["msg"] as? String {
+                    if msg == "ok" {
+                        let valueContact = contact!["data"] as! [[String: Any]]
+                        
+                        for value in valueContact {
+                            let valueMaso = value["maso"] as? String
+                            let valueName = value["hoten"] as? String
+                            let valueEmail = value["email"] as? String
+                            let valuePhone = value["didong"] as? String
+                            let valueMalh = value["malh"] as? Int
+                            let tenkh = value["tenkh"] as? String
+                            let makh = value["makh"] as? Int
+                            
+                            let textData: ContactModel = ContactModel(company: valueName ?? "", mail: valueEmail ?? "", phone: valuePhone ?? "", maso: valueMaso ?? "", malh: valueMalh ?? 0, tenkh: tenkh ?? "", makh: makh ?? 0)
+                            fetchedCustomer.append(textData)
+                        }
+                    }
                 }
             } else {
                 print("api contacts nil")
@@ -62,7 +65,7 @@ class RequestInfoContact {
                 let valueManv = valueContact["manv"] as? Int
                 let valueMakh = valueContact["makh"] as? Int
                 let ngaysinh = valueContact["ngaysinh"] as? String
-              
+                
                 
                 var dateStringNT = String()
                 if ngaysinh != nil {
@@ -73,7 +76,7 @@ class RequestInfoContact {
                     let splistNT2 = splistNT1.components(separatedBy: ")/")
                     let dateNT = Date(milliseconds: Int(splistNT2[0]) ?? 0)
                     dateStringNT = dateformat.string(from: dateNT)
-
+                    
                 }
                 
                 let textData: ListInforContactModel = ListInforContactModel(position: valuePosition ?? "", name: valueName ?? "", tel: valueTel ?? "", phone: didongkhac ?? "", mail: valueEmail ?? "", note: valueNote ?? "", malh: valueMalh ?? "", manv: valueManv ?? 0, makh: valueMakh ?? 0, diachi: valuePosition ?? "", ngaysinh: dateStringNT)

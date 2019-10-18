@@ -88,6 +88,7 @@ class LoginScreenViewController: BaseViewController, UITextFieldDelegate {
         }
         
         self.login = 0
+        
         matkhauTf.text = pass
         taikhoanTf.text = userName
         remmemberSw.isOn = UserDefaults.standard.bool(forKey: "mySwitchValue")
