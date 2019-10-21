@@ -465,11 +465,11 @@
 			isa = PBXGroup;
 			children = (
 				889500A0235427F30023DA73 /* AZ CRM.entitlements */,
+				889500A1235428420023DA73 /* Application */,
 				889500A5235428670023DA73 /* Model */,
 				889500A42354285C0023DA73 /* View */,
 				889500A3235428530023DA73 /* Controller */,
 				889500A22354284D0023DA73 /* Extension + Utilies */,
-				889500A1235428420023DA73 /* Application */,
 				887F8505235424120040D25B /* Main.storyboard */,
 				887F850B235424230040D25B /* Assets.xcassets */,
 				887F850D235424230040D25B /* LaunchScreen.storyboard */,
