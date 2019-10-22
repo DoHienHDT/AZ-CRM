@@ -229,7 +229,10 @@ extension ListScheduleController: SwipeTableViewCellDelegate {
                         if let valueString = response.result.value as? [String: Any] {
                             if let message = valueString["msg"] as? String {
                                 if message == "ok" {
-                                    
+                                    Alarm.alarm.stopAlarm()
+                                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+                                        Alarm.alarm.checkAlarm()
+                                    }
                                 } else {
                                     let alert = UIAlertController(title: "Messages", message: "\(value)", preferredStyle: .alert)
                                     let openAction = UIAlertAction(title: "OK", style: .cancel)

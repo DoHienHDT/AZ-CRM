@@ -229,7 +229,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                             topController.present(storageController, animated: true, completion: nil)
                         }
                     }
-                    //                        self.window?.rootViewController?.present(storageController, animated: true, completion: nil)
                 }
             }
             
@@ -261,7 +260,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 topController.present(alert, animated: true, completion: nil)
                             }
                         }
-                        //                    self.window?.rootViewController?.present(alert, animated: true, completion: nil)
                     }
                 }
             }
