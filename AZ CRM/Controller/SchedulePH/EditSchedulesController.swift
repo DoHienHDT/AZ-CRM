@@ -520,7 +520,7 @@ extension EditSchedulesController {
                         if let valueString =  response.result.value as? [String: Any]  {
                             if let message = valueString["msg"] as? String {
                                 if message == "ok" {
-                                    print("hello")
+                         
                                     Alarm.alarm.stopAlarm()
                                     SVProgressHUD.showSuccess(withStatus: "Thành công")
                                     SVProgressHUD.dismiss(withDelay: 1, completion: {

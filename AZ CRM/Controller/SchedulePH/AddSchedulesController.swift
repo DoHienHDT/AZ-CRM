@@ -388,7 +388,7 @@ extension AddSchedulesController {
                                     SVProgressHUD.showSuccess(withStatus: "Thành công")
                                     SVProgressHUD.dismiss(withDelay: 1, completion: {
                                         Alarm.alarm.checkAlarm()
-                                        print("hello")
+                                   
                                         self.dismiss(animated: true, completion: nil)
                                     })
                                 } else {

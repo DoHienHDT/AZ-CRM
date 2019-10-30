@@ -96,7 +96,7 @@ public extension Siren {
     /// instead of using Siren's prebuilt update alert.
     func launchAppStore() {
         guard let appID = appID,
-            let url = URL(string: "https://itunes.apple.com/app/id\(appID)") else {
+            let url = URL(string: "https://itunes.apple.com/app/id1484775784") else {
                 resultsHandler?(nil, .malformedURL)
                 return
         }
