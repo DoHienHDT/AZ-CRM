@@ -142,14 +142,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         if let messageID = userInfo[gcmMessageIDKey] {
             print("Message ID: \(messageID)")
         }
-        
-        //        let notif = JSON(userInfo)
-        //
-        //        if notif["callback"]["type"] != nil {
-        //            NotificationCenter.default.post(name: Notification.Name(rawValue: "myNotif"), object: nil)
-        //            // This is where you read your JSON to know what kind of notification you received, for example :
-        //
-        //        }
     }
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
